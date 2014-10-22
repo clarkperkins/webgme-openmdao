@@ -1,0 +1,28 @@
+# logs
+server.log
+npm-debug.log
+
+# WebStorm
+.idea
+
+# modules installed by "npm install"
+node_modules
+
+# ignore generated files in output directory
+out
+
+# ignore coverage files
+coverage
+
+# ignore the storage
+blob-local-storage
+executor-temp
+
+# ignore all temp files
+*.tmp
+
+# ignore all .zip files
+*.zip
+
+# ignore database files
+*.nedb
