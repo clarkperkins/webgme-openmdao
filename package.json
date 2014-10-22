@@ -1,0 +1,15 @@
+{
+    "name": "webgme-openmdao",
+    "version": "0.1.0",
+    "repository": {
+
+    },
+    "license": "MIT",
+    "dependencies": {
+        "webgme": "https://github.com/webgme/webgme/tarball/master",
+        "require": ""
+    },
+    "engines": {
+        "node": ""
+    }
+}
