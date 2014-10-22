@@ -1,24 +1,13 @@
 {
-    "port": 80,
+    "port": 8000,
 
     "mongoip": "localhost",
 
     "debug": false,
 
-
-    "decoratorpaths": ["./src/decorators"],
-
-    "visualizerDescriptors": ["./Visualizers.json"],
-
     "pluginBasePaths": [
-        "./src/plugins/OpenMDAO"
     ],
 
-    "rextrast": {
-        "executor": "./src/rest/executor/Executor"
-    },
-
     "paths": {
-        "ejs": "./support/ejs/ejs.min",
     }
 }
