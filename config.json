@@ -11,13 +11,7 @@
     "visualizerDescriptors": ["./Visualizers.json"],
 
     "pluginBasePaths": [
-        "./src/plugins/Examples",
-        "./src/plugins/META",
-        "./src/plugins/FMU",
-        "./src/plugins/PetriNet",
-        "./src/plugins/LogicGates",
-        "./src/plugins/TestCore",
-        "./src/plugins/PortHamiltonianSystem"
+        "./src/plugins/OpenMDAO"
     ],
 
     "rextrast": {
@@ -26,16 +20,5 @@
 
     "paths": {
         "ejs": "./support/ejs/ejs.min",
-        "panels": "./src/panels",
-        "widgets": "./src/widgets",
-        "json2xml": "./lib/json2xml",
-        "xmljsonconverter": "./lib/xmljsonconverter",
-        "sax": "./support/sax/sax",
-        "executor": "./src/rest/executor"
-    },
-
-    "test_paths": {
-        "mocks": "./test/mocks",
-        "models": "./test/models"
     }
 }
