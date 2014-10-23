@@ -6,8 +6,10 @@
     "debug": false,
 
     "pluginBasePaths": [
+        "./src/plugins/META"
     ],
 
     "paths": {
+        "ejs": "./support/ejs/ejs.min.js"
     }
 }
