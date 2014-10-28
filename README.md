@@ -27,7 +27,7 @@ If the package.json changes then:
 
 ## Running WebGME server
 
-* Run webgme `npm start` or `node app.js`, goto [localhost:8000](http://localhost:8000)
+* Run webgme using `node app.js`, goto [localhost:8000](http://localhost:8000)
 
 ## Executing plugin
 

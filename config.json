@@ -6,7 +6,8 @@
     "debug": false,
 
     "pluginBasePaths": [
-        "./src/plugins/META"
+        "./src/plugins/META",
+        "./src/plugins/OpenMDAO"
     ],
 
     "paths": {
