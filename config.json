@@ -10,6 +10,6 @@
     ],
 
     "paths": {
-        "ejs": "./support/ejs/ejs.min.js"
+        "ejs": "./support/ejs/ejs.min"
     }
 }
