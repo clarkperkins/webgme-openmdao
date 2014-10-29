@@ -28,7 +28,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
     * @public
     */
     OpenMDAO.prototype.getName = function () {
-        return "New Plugin";
+        return "OpenMDAO";
     };
 
     /**
