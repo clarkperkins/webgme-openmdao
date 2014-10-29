@@ -1,0 +1,17 @@
+from openmdao.main.api import Assembly
+<% components.forEach(function(component) { %>
+from <%= component.package %> import <%= component.name %>
+<% }) %>
+
+class <%= name %>(Assembly):
+
+    def configure(self):
+        <% components.forEach(function(component) { %>
+        self.add('<%= component.name.toLowerCase() %>', <%= component.name %>())
+        <% }) %>
+
+        self.driver.workflow.add([
+            <% components.forEach(function(component) { %>
+            '<%= component.name.toLowerCase() %>'
+            <% }) %>
+        ])
