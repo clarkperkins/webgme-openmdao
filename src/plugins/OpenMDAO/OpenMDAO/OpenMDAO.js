@@ -141,11 +141,27 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
         //var currentConfig = self.getCurrentConfig();
         //self.logger.info('Current configuration ' + JSON.stringify(currentConfig, null, 4));
 
+        var message;
 
-        if (!self.activeNode) {
-            self.logger.error('No activeNode given');
-            self.createMessage(self.rootNode, 'No activeNode given.');
-            callback('No activeNode given', self.result);
+        var metaType = self.getMetaType(self.activeNode);
+
+        if (!self.activeNode || !metaType) {
+            message = 'No Assembly selected.';
+            self.logger.error(message);
+            self.createMessage(self.rootNode, message);
+            callback(message, self.result);
+            return;
+        }
+
+        console.log(metaType);
+
+        var metaTypeName = metaType.data.atr.name;
+
+        if (metaTypeName != 'Assembly') {
+            message = 'You must select an Assembly, not a ' + metaTypeName + '.';
+            self.logger.error(message);
+            self.createMessage(self.rootNode, message);
+            callback(message, self.result);
             return;
         }
 
@@ -154,7 +170,12 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
 
         // First transform ejs-files into js files (needed for client-side runs) -> run Templates/combine_templates.js.
         // See instructions in file. You must run this after any modifications to the ejs template.
-        var templatePY = ejs.render(TEMPLATES['assembly.py.ejs'], {a: 'a', b: 'b'});
+        var templatePY = ejs.render(TEMPLATES['assembly.py.ejs'],
+            {
+                name: self.activeNode.data.atr.name,
+                components: []
+            });
+
         var templateFileName = 'generatedFiles/assembly.py';
         var artifact = self.blobClient.createArtifact('templateFiles');
         artifact.addFile(templateFileName, templatePY, function (err) {

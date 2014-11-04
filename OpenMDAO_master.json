@@ -22,11 +22,13 @@
     "af6b5b28-d311-c9db-73d4-e79c26675e9b": "1882744588",
     "b4f6f9ae-0f62-47c0-740a-d1cbeb4582a3": "2066633787",
     "c5ad0e31-2eaf-3d44-1fc8-93dd5a99ec33": "1590347901",
+    "c896c65e-738b-8bfa-7ff1-785825044412": "1771177051",
     "ca157fc7-d3bf-57ff-4ba9-a2922c6a677e": "445648520",
     "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045": "1",
     "d29a8875-620d-e7f9-0faf-bafd093c57df": "327772930",
     "d7d09908-7034-1a5f-7648-d0a21c5c7d08": "1341672475",
     "efb945c7-e43e-c0f2-7955-c201eb35082c": "1193320187",
+    "f0de12e6-364f-8234-d0d8-2e25f9403e1d": "1824416247",
     "fa3a1dd9-c3fe-bd90-fa35-b5ef7e52cdcc": "1489122824"
   },
   "containment": {
@@ -46,6 +48,7 @@
         }
       }
     },
+    "c896c65e-738b-8bfa-7ff1-785825044412": {},
     "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045": {},
     "d7d09908-7034-1a5f-7648-d0a21c5c7d08": {
       "47a949fd-47d8-3579-e5e1-90293ea18a33": {},
@@ -56,7 +59,8 @@
       "b4f6f9ae-0f62-47c0-740a-d1cbeb4582a3": {},
       "c5ad0e31-2eaf-3d44-1fc8-93dd5a99ec33": {},
       "d29a8875-620d-e7f9-0faf-bafd093c57df": {}
-    }
+    },
+    "f0de12e6-364f-8234-d0d8-2e25f9403e1d": {}
   },
   "nodes": {
     "34c76fbd-d054-5afb-5031-12ef8beb3652": {
@@ -609,7 +613,8 @@
     },
     "b4f6f9ae-0f62-47c0-740a-d1cbeb4582a3": {
       "attributes": {
-        "name": "Component"
+        "name": "Component",
+        "package": ""
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
@@ -623,6 +628,12 @@
           "items": [
             "c5ad0e31-2eaf-3d44-1fc8-93dd5a99ec33"
           ]
+        },
+        "attributes": {
+          "package": {
+            "type": "string",
+            "default": ""
+          }
         },
         "pointers": {
           "workflow": {
@@ -669,6 +680,34 @@
         "position": {
           "x": 118,
           "y": 128
+        }
+      },
+      "sets": {}
+    },
+    "c896c65e-738b-8bfa-7ff1-785825044412": {
+      "attributes": {
+        "name": "My new obj"
+      },
+      "base": null,
+      "meta": {
+        "children": {
+          "minItems": [],
+          "maxItems": [],
+          "items": []
+        },
+        "attributes": {},
+        "pointers": {},
+        "aspects": {},
+        "constraints": {}
+      },
+      "parent": "83d819f8-c3bb-0e18-35ab-c6b9aa0fd017",
+      "pointers": {
+        "base": null
+      },
+      "registry": {
+        "position": {
+          "x": 70,
+          "y": 70
         }
       },
       "sets": {}
@@ -819,6 +858,34 @@
         "position": {
           "x": 242,
           "y": 196
+        }
+      },
+      "sets": {}
+    },
+    "f0de12e6-364f-8234-d0d8-2e25f9403e1d": {
+      "attributes": {
+        "name": "My new obj"
+      },
+      "base": null,
+      "meta": {
+        "children": {
+          "minItems": [],
+          "maxItems": [],
+          "items": []
+        },
+        "attributes": {},
+        "pointers": {},
+        "aspects": {},
+        "constraints": {}
+      },
+      "parent": "83d819f8-c3bb-0e18-35ab-c6b9aa0fd017",
+      "pointers": {
+        "base": null
+      },
+      "registry": {
+        "position": {
+          "x": 205,
+          "y": 128
         }
       },
       "sets": {}
