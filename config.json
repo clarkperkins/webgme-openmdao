@@ -7,10 +7,12 @@
 
     "pluginBasePaths": [
         "./src/plugins/META",
-        "./src/plugins/OpenMDAO"
+        "./src/plugins/OpenMDAO",
+	"./src/plugins/examples"
     ],
 
     "paths": {
         "ejs": "./support/ejs/ejs.min"
     }
 }
+
