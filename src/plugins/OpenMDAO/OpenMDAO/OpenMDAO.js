@@ -195,6 +195,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                         break;
 
                     case 'c_input':
+                        // This is a parameter, because it comes FROM the driver
                         self.core.loadPointer(child, 'dst', function (err, dst) {
                             if (err) {
                                 callback('failed to pointer, error: ' + err, self.result);
@@ -219,6 +220,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                         break;
 
                     case 'c_output':
+                        // This is an objective, since it goes TO the driver
                         self.core.loadPointer(child, 'src', function (err, src) {
                             if (err) {
                                 callback('failed to pointer, error: ' + err, self.result);
