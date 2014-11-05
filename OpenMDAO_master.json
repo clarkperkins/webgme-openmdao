@@ -140,7 +140,7 @@
       "attributes": {
         "name": "f(x,y)",
         "unit": "cm",
-        "value": "f_xy"
+        "value": "f_xy =  = (x-3)^2 + xy + (y+4)^2 - 3"
       },
       "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
       "meta": {},
@@ -576,7 +576,9 @@
     },
     "63dcff67-7ef7-f203-2882-fbcac2f9e186": {
       "attributes": {
-        "name": "y"
+        "design_objective": "(-50,50)",
+        "name": "y",
+        "unit": "cm"
       },
       "base": "b85a1daf-9195-3b2c-80fc-5346c1c3e771",
       "meta": {},
@@ -663,7 +665,9 @@
     },
     "9a4ffbf3-6947-4e8a-6379-b8465398dddc": {
       "attributes": {
-        "name": "x"
+        "design_objective": "(-50,50)",
+        "name": "x",
+        "unit": "cm"
       },
       "base": "b85a1daf-9195-3b2c-80fc-5346c1c3e771",
       "meta": {},
@@ -732,7 +736,7 @@
     },
     "af1db5f5-143a-fba6-9cd9-a55093e56125": {
       "attributes": {
-        "objective": "f_xy=(-50,50)"
+        "objective": "f_xy"
       },
       "base": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
       "meta": {},
@@ -742,8 +746,8 @@
       },
       "registry": {
         "position": {
-          "x": 617,
-          "y": 165
+          "x": 620,
+          "y": 161
         }
       },
       "sets": {}
@@ -782,6 +786,7 @@
     },
     "b85a1daf-9195-3b2c-80fc-5346c1c3e771": {
       "attributes": {
+        "design_objective": "",
         "name": "D_OUT",
         "unit": "",
         "value": ""
@@ -794,6 +799,10 @@
             "default": ""
           },
           "unit": {
+            "type": "string",
+            "default": ""
+          },
+          "design_objective": {
             "type": "string",
             "default": ""
           }
