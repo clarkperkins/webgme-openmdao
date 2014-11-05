@@ -7,8 +7,7 @@
 
     "pluginBasePaths": [
         "./src/plugins/META",
-        "./src/plugins/OpenMDAO",
-	"./src/plugins/examples"
+        "./src/plugins/OpenMDAO"
     ],
 
     "paths": {

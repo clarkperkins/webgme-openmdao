@@ -153,7 +153,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             return;
         }
 
-        console.log(metaType);
+        console.log(MetaTypes);
 
         var metaTypeName = metaType.data.atr.name;
 
@@ -173,7 +173,12 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
         var templatePY = ejs.render(TEMPLATES['assembly.py.ejs'],
             {
                 name: self.activeNode.data.atr.name,
-                components: []
+                components: [
+                    {
+                        name: 'Vehicle',
+                        package: 'mine.components'
+                    }
+                ]
             });
 
         var templateFileName = 'generatedFiles/assembly.py';
