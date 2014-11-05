@@ -120,7 +120,7 @@
     },
     "18ea788b-2eb9-82a2-4370-a2944a99d51a": {
       "attributes": {
-        "name": "paraboloid"
+        "name": "Paraboloid"
       },
       "base": "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
       "meta": {},
@@ -198,15 +198,18 @@
         "src": null
       },
       "registry": {
+        "isAbstract": false,
         "position": {
-          "x": 622,
-          "y": 358
+          "x": 620,
+          "y": 351
         }
       },
       "sets": {}
     },
     "2a0fc65f-d2b8-00a6-71bd-84f257c54254": {
-      "attributes": {},
+      "attributes": {
+        "name": "Paraboloid"
+      },
       "base": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
       "meta": {},
       "parent": "18ea788b-2eb9-82a2-4370-a2944a99d51a",
@@ -223,7 +226,7 @@
     },
     "35de2499-e5ab-19e6-240b-3cb6ecbb0c22": {
       "attributes": {
-        "name": "c_inputs"
+        "name": "c_input"
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
@@ -263,6 +266,7 @@
         "src": null
       },
       "registry": {
+        "isAbstract": false,
         "position": {
           "x": 166,
           "y": 352
@@ -312,7 +316,7 @@
           "FCO_ID": "/1"
         },
         "usedAddOns": "ConstraintAddOn",
-        "validPlugins": "PluginGenerator"
+        "validPlugins": "OpenMDAO PluginGenerator"
       },
       "sets": {
         "MetaAspectSet": [
@@ -398,16 +402,6 @@
           },
           {
             "attributes": {},
-            "guid": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
-            "registry": {
-              "position": {
-                "x": 100,
-                "y": 100
-              }
-            }
-          },
-          {
-            "attributes": {},
             "guid": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
             "registry": {
               "position": {
@@ -473,8 +467,8 @@
             "guid": "7f35695c-81f1-566b-3c77-3effd0805b83",
             "registry": {
               "position": {
-                "x": 392,
-                "y": 32
+                "x": 75,
+                "y": 55
               }
             }
           },
@@ -510,16 +504,6 @@
           },
           {
             "attributes": {},
-            "guid": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
-            "registry": {
-              "position": {
-                "x": 52,
-                "y": 33
-              }
-            }
-          },
-          {
-            "attributes": {},
             "guid": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
             "registry": {
               "position": {
@@ -543,7 +527,9 @@
     },
     "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1": {
       "attributes": {
-        "name": "component"
+        "class_name": "",
+        "name": "Component",
+        "package": ""
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
@@ -560,6 +546,16 @@
             "a461d7a6-abe0-a69e-e44f-d215340133b3",
             "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
           ]
+        },
+        "attributes": {
+          "package": {
+            "type": "string",
+            "default": ""
+          },
+          "class_name": {
+            "type": "string",
+            "default": ""
+          }
         }
       },
       "parent": "7f35695c-81f1-566b-3c77-3effd0805b83",
@@ -567,6 +563,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "isAbstract": false,
         "position": {
           "x": 180,
           "y": 127
@@ -596,12 +593,13 @@
     },
     "7e59f579-fa65-a139-bcfe-664abf5a1a3b": {
       "attributes": {
-        "name": "assembly"
+        "name": "Assembly"
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
         "children": {
           "minItems": [
+            -1,
             -1,
             -1,
             -1,
@@ -611,11 +609,13 @@
             -1,
             -1,
             -1,
+            -1,
             1
           ],
           "items": [
-            "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
             "26b7ba2b-2290-a298-76cb-523734dcd8d2",
+            "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
+            "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
             "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
             "ceb98f28-1c51-cb46-4d75-7bccf1ecd944"
           ]
@@ -626,6 +626,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "isAbstract": false,
         "position": {
           "x": 372,
           "y": 28
@@ -635,7 +636,7 @@
     },
     "7f35695c-81f1-566b-3c77-3effd0805b83": {
       "attributes": {
-        "name": "META_Language"
+        "name": "MetaLanguage"
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
@@ -656,6 +657,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "isAbstract": false,
         "position": {
           "x": 401,
           "y": 127
@@ -726,6 +728,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "isAbstract": false,
         "isPort": true,
         "position": {
           "x": 267,
@@ -776,6 +779,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "isAbstract": false,
         "isPort": true,
         "position": {
           "x": 708,
@@ -813,6 +817,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "isAbstract": false,
         "isPort": true,
         "position": {
           "x": 503,
@@ -856,7 +861,7 @@
         "PortSVGIcon": "",
         "SVGIcon": "",
         "decorator": "",
-        "isAbstract": false,
+        "isAbstract": true,
         "isPort": false,
         "position": {
           "x": 100,
@@ -887,7 +892,7 @@
     },
     "ceb98f28-1c51-cb46-4d75-7bccf1ecd944": {
       "attributes": {
-        "name": "driver",
+        "name": "Driver",
         "objective": ""
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
@@ -898,12 +903,12 @@
             -1
           ],
           "maxItems": [
-            1,
-            -1
+            -1,
+            1
           ],
           "items": [
-            "b0972759-42b6-8502-6118-8990d473f0f3",
-            "b85a1daf-9195-3b2c-80fc-5346c1c3e771"
+            "b85a1daf-9195-3b2c-80fc-5346c1c3e771",
+            "b0972759-42b6-8502-6118-8990d473f0f3"
           ]
         },
         "attributes": {
@@ -918,6 +923,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "isAbstract": false,
         "position": {
           "x": 526,
           "y": 145
@@ -927,7 +933,7 @@
     },
     "e39ee0cb-b5ef-b41d-d9b4-11263972048a": {
       "attributes": {
-        "name": "c_in",
+        "name": "C_IN",
         "unit": "",
         "value": ""
       },
@@ -949,6 +955,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "isAbstract": false,
         "isPort": true,
         "position": {
           "x": 67,
