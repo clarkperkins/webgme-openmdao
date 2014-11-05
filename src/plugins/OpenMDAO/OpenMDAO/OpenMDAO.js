@@ -153,8 +153,6 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             return;
         }
 
-        console.log(MetaTypes);
-
         var metaTypeName = metaType.data.atr.name;
 
         if (metaTypeName != 'Assembly') {
@@ -165,20 +163,105 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             return;
         }
 
-        console.log(self.activeNode);
+        var afterLoading = function(err, children) {
+            if (err) {
+                callback('failed to load children, error: ' + err, self.result);
+                return;
+            }
+
+            var components = [];
+            var driver = null;
+            var objectives = [];
+            var parameters = [];
+
+            children.forEach(function (child) {
+                var metaType = self.getMetaType(child);
+                if (!metaType) {
+                    self.logger.warn(child.data.atr.name + ' has no meta type.');
+                    return;
+                }
+
+                switch (metaType.data.atr.name) {
+                    case 'Assembly':
+                        // Not sure yet
+                        break;
+
+                    case 'Component':
+                        components[components.length] = child.data.atr;
+                        break;
+
+                    case 'Driver':
+                        driver = child.data.atr;
+                        break;
+
+                    case 'c_input':
+                        self.core.loadPointer(child, 'dst', function (err, dst) {
+                            if (err) {
+                                callback('failed to pointer, error: ' + err, self.result);
+                                return;
+                            }
+                            var idx = parameters.length;
+
+                            parameters[idx] = {
+                                name: self.core.getParent(dst).data.atr.name + '.' + dst.data.atr.name
+                            };
+
+                            self.core.loadPointer(child, 'src', function (err, src) {
+                                if (err) {
+                                    callback('failed to pointer, error: ' + err, self.result);
+                                    return;
+                                }
+                                var spl = src.data.atr.design_objective.split(',');
+                                parameters[idx].low = spl[0].split('(')[1];
+                                parameters[idx].high = spl[1].split(')')[0];
+                            });
+                        });
+                        break;
+
+                    case 'c_output':
+                        self.core.loadPointer(child, 'src', function (err, src) {
+                            if (err) {
+                                callback('failed to pointer, error: ' + err, self.result);
+                                return;
+                            }
+
+                            objectives[objectives.length] = {
+                                name: self.core.getParent(src).data.atr.name + '.' + src.data.atr.name
+                            };
 
 
+                        });
+                        break;
+
+                }
+            });
+
+            self.generatePython(driver, components, objectives, parameters, callback);
+        };
+
+        self.core.loadChildren(self.activeNode, afterLoading);
+    };
+
+    /**
+     * Do the generation of the python file
+     * @param driver
+     * @param components
+     * @param objectives
+     * @param parameters
+     * @param callback
+     */
+    OpenMDAO.prototype.generatePython = function (driver, components, objectives, parameters, callback) {
         // First transform ejs-files into js files (needed for client-side runs) -> run Templates/combine_templates.js.
         // See instructions in file. You must run this after any modifications to the ejs template.
+        var self = this;
+
         var templatePY = ejs.render(TEMPLATES['assembly.py.ejs'],
             {
                 name: self.activeNode.data.atr.name,
-                components: [
-                    {
-                        name: 'Vehicle',
-                        package: 'mine.components'
-                    }
-                ]
+                driver: driver,
+                components: components,
+                objectives: objectives,
+                parameters: parameters
             });
 
         var templateFileName = 'generatedFiles/assembly.py';
@@ -203,7 +286,6 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 });
             });
         });
-
     };
 
     return OpenMDAO;

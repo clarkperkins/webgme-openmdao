@@ -2,19 +2,35 @@
 # Modify at your own risk
 
 from openmdao.main.api import Assembly
-<% components.forEach(function(component) { %>
-from <%= component.package %> import <%= component.name %>
+<% components.forEach(function (component) { %>
+from <%= component.package %> import <%= component.class_name %>
 <% }) %>
+
+<% if (driver) { %>
+from <%= driver.package %> import <%= driver.class_name %>
+<% } %>
 
 class <%= name %>(Assembly):
 
     def configure(self):
-        <% components.forEach(function(component) { %>
-        self.add('<%= component.name.toLowerCase() %>', <%= component.name %>())
+        <% if (driver) { %>
+        self.add('driver', <%= driver.class_name %>())
+        <% } %>
+
+        <% components.forEach(function (component) { %>
+        self.add('<%= component.name %>', <%= component.class_name %>())
         <% }) %>
 
         self.driver.workflow.add([
-            <% components.forEach(function(component) { %>
-            '<%= component.name.toLowerCase() %>',
+            <% components.forEach(function (component) { %>
+            '<%= component.name %>',
             <% }) %>
         ])
+
+        <% objectives.forEach(function (objective) { %>
+        self.driver.add_objective('<%= objective.name %>')
+        <% }) %>
+
+        <% parameters.forEach(function (parameter) { %>
+        self.driver.add_parameter('<%= parameter.name %>', low=<%= parameter.low %>, high=<%= parameter.high %>)
+        <% }) %>

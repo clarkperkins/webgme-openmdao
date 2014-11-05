@@ -138,9 +138,9 @@
     },
     "1fcaa7c8-e7b1-31ac-10c7-b8ec7e97fc57": {
       "attributes": {
-        "name": "f(x,y)",
+        "name": "f_xy",
         "unit": "cm",
-        "value": "f_xy =  = (x-3)^2 + xy + (y+4)^2 - 3"
+        "value": "f_xy"
       },
       "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
       "meta": {},
@@ -208,7 +208,9 @@
     },
     "2a0fc65f-d2b8-00a6-71bd-84f257c54254": {
       "attributes": {
-        "name": "Paraboloid"
+        "class_name": "Paraboloid",
+        "name": "par",
+        "package": "openmdao.examples.simple.paraboloid"
       },
       "base": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
       "meta": {},
@@ -679,8 +681,8 @@
       },
       "registry": {
         "position": {
-          "x": 400,
-          "y": 141
+          "x": 399,
+          "y": 140
         }
       },
       "sets": {}
@@ -739,7 +741,10 @@
     },
     "af1db5f5-143a-fba6-9cd9-a55093e56125": {
       "attributes": {
-        "objective": "f_xy"
+        "class_name": "SLSQPdriver",
+        "name": "driver",
+        "objective": "parabaloid.f_xy",
+        "package": "openmdao.examples.simple.paraboloid"
       },
       "base": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
       "meta": {},
@@ -892,8 +897,10 @@
     },
     "ceb98f28-1c51-cb46-4d75-7bccf1ecd944": {
       "attributes": {
+        "class_name": "",
         "name": "Driver",
-        "objective": ""
+        "objective": "",
+        "package": ""
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
@@ -903,16 +910,24 @@
             -1
           ],
           "maxItems": [
-            -1,
-            1
+            1,
+            -1
           ],
           "items": [
-            "b85a1daf-9195-3b2c-80fc-5346c1c3e771",
-            "b0972759-42b6-8502-6118-8990d473f0f3"
+            "b0972759-42b6-8502-6118-8990d473f0f3",
+            "b85a1daf-9195-3b2c-80fc-5346c1c3e771"
           ]
         },
         "attributes": {
           "objective": {
+            "type": "string",
+            "default": ""
+          },
+          "class_name": {
+            "type": "string",
+            "default": ""
+          },
+          "package": {
             "type": "string",
             "default": ""
           }
