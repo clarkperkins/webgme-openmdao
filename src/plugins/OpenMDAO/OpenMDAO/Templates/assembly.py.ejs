@@ -2,10 +2,10 @@
 # Modify at your own risk
 
 from openmdao.main.api import Assembly
-<%  for (var package in uniqueImports) { %>
-<%      if (uniqueImports.hasOwnProperty(package)) { %>
-from <%= package %> import (
-<%          uniqueImports[package].forEach(function (class_name) { %>
+<%  for (var myPackage in uniqueImports) { %>
+<%      if (uniqueImports.hasOwnProperty(myPackage)) { %>
+from <%= myPackage %> import (
+<%          uniqueImports[myPackage].forEach(function (class_name) { %>
     <%= class_name %>,
 <%          }) %>
 )
