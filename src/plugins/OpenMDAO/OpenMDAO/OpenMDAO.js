@@ -173,30 +173,33 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             var driver = null;
             var objectives = [];
             var parameters = [];
+            var assemblyName = 'mymodel';
 
-            children.forEach(function (child) {
-                var metaType = self.getMetaType(child);
+            children.forEach(function (node) {
+                var metaType = self.getMetaType(node);
                 if (!metaType) {
-                    self.logger.warn(child.data.atr.name + ' has no meta type.');
+                    self.logger.warn(node.data.atr.name + ' has no meta type.');
                     return;
                 }
 
+                assemblyName = self.core.getParent(node).data.atr.name.toLowerCase();
+
                 switch (metaType.data.atr.name) {
                     case 'Assembly':
-                        // Not sure yet
+                        self.core.loadChildren(node, afterLoading);
                         break;
 
                     case 'Component':
-                        components[components.length] = child.data.atr;
+                        components[components.length] = node.data.atr;
                         break;
 
                     case 'Driver':
-                        driver = child.data.atr;
+                        driver = node.data.atr;
                         break;
 
-                    case 'c_input':
+                    case 'parameter':
                         // This is a parameter, because it comes FROM the driver
-                        self.core.loadPointer(child, 'dst', function (err, dst) {
+                        self.core.loadPointer(node, 'dst', function (err, dst) {
                             if (err) {
                                 callback('failed to pointer, error: ' + err, self.result);
                                 return;
@@ -207,7 +210,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                                 name: self.core.getParent(dst).data.atr.name + '.' + dst.data.atr.name
                             };
 
-                            self.core.loadPointer(child, 'src', function (err, src) {
+                            self.core.loadPointer(node, 'src', function (err, src) {
                                 if (err) {
                                     callback('failed to pointer, error: ' + err, self.result);
                                     return;
@@ -219,9 +222,9 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                         });
                         break;
 
-                    case 'c_output':
+                    case 'objective':
                         // This is an objective, since it goes TO the driver
-                        self.core.loadPointer(child, 'src', function (err, src) {
+                        self.core.loadPointer(node, 'src', function (err, src) {
                             if (err) {
                                 callback('failed to pointer, error: ' + err, self.result);
                                 return;
@@ -230,15 +233,20 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                             objectives[objectives.length] = {
                                 name: self.core.getParent(src).data.atr.name + '.' + src.data.atr.name
                             };
-
-
+                            
                         });
                         break;
 
+                    case 'connection':
+                        // Between components
+                        self.core.loadPointer(node, 'src', function(err, src) {
+
+                        });
+                        break;
                 }
             });
 
-            self.generatePython(driver, components, objectives, parameters, callback);
+            self.generatePython(assemblyName, driver, components, objectives, parameters, callback);
         };
 
         self.core.loadChildren(self.activeNode, afterLoading);
@@ -246,13 +254,14 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
 
     /**
      * Do the generation of the python file
+     * @param assemblyName
      * @param driver
      * @param components
      * @param objectives
      * @param parameters
      * @param callback
      */
-    OpenMDAO.prototype.generatePython = function (driver, components, objectives, parameters, callback) {
+    OpenMDAO.prototype.generatePython = function (assemblyName, driver, components, objectives, parameters, callback) {
         // First transform ejs-files into js files (needed for client-side runs) -> run Templates/combine_templates.js.
         // See instructions in file. You must run this after any modifications to the ejs template.
         var self = this;
@@ -266,7 +275,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 parameters: parameters
             });
 
-        var templateFileName = 'generatedFiles/assembly.py';
+        var templateFileName = self.activeNode.data.atr.name.toLowerCase()+'/'+assemblyName+'.py';
         var artifact = self.blobClient.createArtifact('templateFiles');
         artifact.addFile(templateFileName, templatePY, function (err) {
             if (err) {
