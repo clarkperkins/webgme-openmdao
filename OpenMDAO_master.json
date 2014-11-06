@@ -118,7 +118,7 @@
     },
     "18ea788b-2eb9-82a2-4370-a2944a99d51a": {
       "attributes": {
-        "name": "Paraboloid"
+        "name": "ParaboloidUnconstrained"
       },
       "base": "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
       "meta": {},
@@ -278,6 +278,7 @@
     },
     "368cd6d1-d51f-ab10-b5ce-029967f9d78e": {
       "attributes": {
+        "design_objective": "(-50,50)",
         "name": "y2"
       },
       "base": "b85a1daf-9195-3b2c-80fc-5346c1c3e771",
@@ -288,8 +289,8 @@
       },
       "registry": {
         "position": {
-          "x": 411,
-          "y": 330
+          "x": 395,
+          "y": 329
         }
       },
       "sets": {}
@@ -880,7 +881,7 @@
         "class_name": "SLSQPdriver",
         "name": "driver",
         "objective": "parabaloid.f_xy",
-        "package": "openmdao.examples.simple.paraboloid"
+        "package": "openmdao.lib.drivers.api"
       },
       "base": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
       "meta": {},

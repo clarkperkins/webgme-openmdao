@@ -173,6 +173,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             var driver = null;
             var objectives = [];
             var parameters = [];
+            var connections = [];
             var assemblyName = 'mymodel';
 
             children.forEach(function (node) {
@@ -240,13 +241,30 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                     case 'connection':
                         // Between components
                         self.core.loadPointer(node, 'src', function(err, src) {
+                            if (err) {
+                                callback('failed to pointer, error: ' + err, self.result);
+                                return;
+                            }
+                            var idx = connections.length;
 
+                            connections[idx] = {
+                                from: self.core.getParent(src).data.atr.name + '.' + src.data.atr.name
+                            };
+
+                            self.core.loadPointer(node, 'dst', function(err, dst) {
+                                if (err) {
+                                    callback('failed to pointer, error: ' + err, self.result);
+                                    return;
+                                }
+
+                                connections[idx].to = self.core.getParent(dst).data.atr.name + '.' + dst.data.atr.name;
+                            });
                         });
                         break;
                 }
             });
 
-            self.generatePython(assemblyName, driver, components, objectives, parameters, callback);
+            self.generatePython(assemblyName, driver, components, objectives, parameters, connections, callback);
         };
 
         self.core.loadChildren(self.activeNode, afterLoading);
@@ -259,20 +277,48 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
      * @param components
      * @param objectives
      * @param parameters
+     * @param connections
      * @param callback
      */
-    OpenMDAO.prototype.generatePython = function (assemblyName, driver, components, objectives, parameters, callback) {
+    OpenMDAO.prototype.generatePython = function (assemblyName, driver, components, objectives, parameters, connections, callback) {
         // First transform ejs-files into js files (needed for client-side runs) -> run Templates/combine_templates.js.
         // See instructions in file. You must run this after any modifications to the ejs template.
         var self = this;
 
-        var templatePY = ejs.render(TEMPLATES['assembly.py.ejs'],
+        var uniqueImports = {};
+
+        // Find all the imports for the components
+        components.forEach(function (component) {
+            if (!uniqueImports.hasOwnProperty(component.package)) {
+                uniqueImports[component.package] = [];
+            }
+            if (uniqueImports[component.package].indexOf(component.class_name) == -1) {
+                var idx = uniqueImports[component.package].length;
+                uniqueImports[component.package][idx] = component.class_name;
+            }
+        });
+
+        // Find the import for the driver
+        if (driver) {
+            if (!uniqueImports.hasOwnProperty(driver.package)) {
+                uniqueImports[driver.package] = [];
+            }
+            if (uniqueImports[driver.package].indexOf(driver.class_name) == -1) {
+                var idx = uniqueImports[driver.package].length;
+                uniqueImports[driver.package][idx] = driver.class_name;
+            }
+        }
+
+        var templatePY = ejs.render(
+            TEMPLATES['assembly.py.ejs'],
             {
                 name: self.activeNode.data.atr.name,
                 driver: driver,
                 components: components,
+                uniqueImports: uniqueImports,
                 objectives: objectives,
-                parameters: parameters
+                parameters: parameters,
+                connections: connections
             });
 
         var templateFileName = self.activeNode.data.atr.name.toLowerCase()+'/'+assemblyName+'.py';
