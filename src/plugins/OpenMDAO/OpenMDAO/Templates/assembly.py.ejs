@@ -41,3 +41,15 @@ class <%= name %>(Assembly):
         <% connections.forEach(function (connection) { %>
         self.connect('<%= connection.from %>', '<%= connection.to %>')
         <% }) %>
+
+
+if __name__ == '__main__':
+    problem = <%= name %>()
+
+    problem.run()
+
+    print 'Optimized values:'
+
+    <% parameters.forEach(function (parameter) { %>
+    print '<%= parameter.name %>: {0}'.format(problem.<%= parameter.name %>)
+    <% }) %>
