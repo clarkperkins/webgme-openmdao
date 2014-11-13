@@ -205,21 +205,23 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                                 callback('failed to pointer, error: ' + err, self.result);
                                 return;
                             }
-                            var idx = parameters.length;
 
-                            parameters[idx] = {
+                            // Get the parameter attrs (low & high & name)
+                            parameters[parameters.length] = {
+                                low: node.data.atr.low,
+                                high: node.data.atr.high,
                                 name: self.core.getParent(dst).data.atr.name + '.' + dst.data.atr.name
                             };
 
-                            self.core.loadPointer(node, 'src', function (err, src) {
-                                if (err) {
-                                    callback('failed to pointer, error: ' + err, self.result);
-                                    return;
-                                }
-                                var spl = src.data.atr.design_objective.split(',');
-                                parameters[idx].low = spl[0].split('(')[1];
-                                parameters[idx].high = spl[1].split(')')[0];
-                            });
+                            //self.core.loadPointer(node, 'src', function (err, src) {
+                            //    if (err) {
+                            //        callback('failed to pointer, error: ' + err, self.result);
+                            //        return;
+                            //    }
+                            //    var spl = src.data.atr.design_objective.split(',');
+                            //    parameters[idx].low = spl[0].split('(')[1];
+                            //    parameters[idx].high = spl[1].split(')')[0];
+                            //});
                         });
                         break;
 
