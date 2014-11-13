@@ -4,11 +4,7 @@
 from openmdao.main.api import Assembly
 <%  for (var myPackage in uniqueImports) { %>
 <%      if (uniqueImports.hasOwnProperty(myPackage)) { %>
-from <%= myPackage %> import (
-<%          uniqueImports[myPackage].forEach(function (class_name) { %>
-    <%= class_name %>,
-<%          }) %>
-)
+from <%= myPackage %> import <%= uniqueImports[myPackage] %>
 <%      } %>
 <%  } %>
 

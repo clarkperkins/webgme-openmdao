@@ -309,13 +309,22 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             }
         }
 
+        // Collect all the classes for each package into a comma-separated string, so it prints nicer
+        var joinedImports = {};
+
+        for (var myPackage in uniqueImports) {
+            if (uniqueImports.hasOwnProperty(myPackage)) {
+                joinedImports[myPackage] = uniqueImports[myPackage].join(', ');
+            }
+        }
+
         var templatePY = ejs.render(
             TEMPLATES['assembly.py.ejs'],
             {
                 name: self.activeNode.data.atr.name,
                 driver: driver,
                 components: components,
-                uniqueImports: uniqueImports,
+                uniqueImports: joinedImports,
                 objectives: objectives,
                 parameters: parameters,
                 connections: connections
