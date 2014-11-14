@@ -174,6 +174,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             var objectives = [];
             var parameters = [];
             var connections = [];
+            var passthroughs = [];
             var assemblyName = 'mymodel';
 
             children.forEach(function (node) {
@@ -257,17 +258,79 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
 
                     case 'passthrough_in':
                         // Assembly to Component
+                        self.core.loadPointer(node, 'src', function(err, src) {
+                            if (err) {
+                                callback('failed to pointer, error: ' + err, self.result);
+                                return;
+                            }
 
+                            var srcName = src.data.atr.name;
+
+                            var srcUnit = src.data.atr.unit;
+
+                            self.core.loadPointer(node, 'dst', function(err, dst) {
+                                if (err) {
+                                    callback('failed to pointer, error: ' + err, self.result);
+                                    return;
+                                }
+
+                                var dstName = self.core.getParent(dst).data.atr.name + '.' + dst.data.atr.name;
+
+                                var dstUnit = dst.data.atr.unit;
+
+                                if (srcUnit === dstUnit) {
+                                    passthroughs[passthroughs.length] = {
+                                        name: dstName
+                                    };
+                                } else {
+                                    connections[connections.length] = {
+                                        from: srcName,
+                                        to: dstName
+                                    }
+                                }
+                            });
+                        });
                         break;
 
                     case 'passthrough_out':
                         // Component to Assembly
+                        self.core.loadPointer(node, 'src', function(err, src) {
+                            if (err) {
+                                callback('failed to pointer, error: ' + err, self.result);
+                                return;
+                            }
 
+                            var srcName = self.core.getParent(src).data.atr.name + '.' + src.data.atr.name
+
+                            var srcUnit = src.data.atr.unit;
+
+                            self.core.loadPointer(node, 'dst', function(err, dst) {
+                                if (err) {
+                                    callback('failed to pointer, error: ' + err, self.result);
+                                    return;
+                                }
+
+                                var dstName = dst.data.atr.name;
+
+                                var dstUnit = dst.data.atr.unit;
+
+                                if (srcUnit === dstUnit) {
+                                    passthroughs[passthroughs.length] = {
+                                        name: srcName
+                                    };
+                                } else {
+                                    connections[connections.length] = {
+                                        from: srcName,
+                                        to: dstName
+                                    }
+                                }
+                            });
+                        });
                         break;
                 }
             });
 
-            self.generatePython(assemblyName, driver, components, objectives, parameters, connections, callback);
+            self.generatePython(assemblyName, driver, components, objectives, parameters, connections, passthroughs, callback);
         };
 
         self.core.loadChildren(self.activeNode, afterLoading);
@@ -281,9 +344,10 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
      * @param objectives
      * @param parameters
      * @param connections
+     * @param passthroughs
      * @param callback
      */
-    OpenMDAO.prototype.generatePython = function (assemblyName, driver, components, objectives, parameters, connections, callback) {
+    OpenMDAO.prototype.generatePython = function (assemblyName, driver, components, objectives, parameters, connections, passthroughs, callback) {
         // First transform ejs-files into js files (needed for client-side runs) -> run Templates/combine_templates.js.
         // See instructions in file. You must run this after any modifications to the ejs template.
         var self = this;
@@ -330,7 +394,8 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 uniqueImports: joinedImports,
                 objectives: objectives,
                 parameters: parameters,
-                connections: connections
+                connections: connections,
+                passthroughs: passthroughs
             });
 
         var templateFileName = self.activeNode.data.atr.name.toLowerCase()+'/'+assemblyName+'.py';

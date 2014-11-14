@@ -960,7 +960,8 @@
     },
     "3a2c4a4a-7f36-c113-2c40-b9a55ee5b736": {
       "attributes": {
-        "name": "velocity"
+        "name": "velocity",
+        "unit": "mi/h"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -1032,7 +1033,8 @@
     },
     "42f6d3b2-6949-f380-2db9-dd806f1fbc07": {
       "attributes": {
-        "name": "power"
+        "name": "power",
+        "unit": "kW"
       },
       "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
       "meta": {},
@@ -1791,7 +1793,8 @@
     },
     "c69699e8-cccf-5214-74a7-dcaa3d5cc833": {
       "attributes": {
-        "name": "fuel_burn"
+        "name": "fuel_burn",
+        "unit": "L/s"
       },
       "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
       "meta": {},
@@ -2205,7 +2208,8 @@
     },
     "e5dc64bf-8c5b-af81-3550-12c3d8786e78": {
       "attributes": {
-        "name": "acceleration"
+        "name": "acceleration",
+        "unit": "m/(s*s)"
       },
       "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
       "meta": {},
@@ -2223,7 +2227,8 @@
     },
     "ec0b6e7a-2834-bb4a-83a4-fac211bd0aad": {
       "attributes": {
-        "name": "tire_circumference"
+        "name": "tire_circumference",
+        "unit": "inch"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},

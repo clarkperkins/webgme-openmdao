@@ -42,6 +42,10 @@ class <%= name %>(Assembly):
         self.connect('<%= connection.from %>', '<%= connection.to %>')
         <% }) %>
 
+        # Passthroughs
+        <% passthroughs.forEach(function (passthrough) { %>
+        self.create_passthrough('<%= passthrough.name %>')
+        <% }) %>
 
 if __name__ == '__main__':
     problem = <%= name %>()
