@@ -213,15 +213,6 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                                 name: self.core.getParent(dst).data.atr.name + '.' + dst.data.atr.name
                             };
 
-                            //self.core.loadPointer(node, 'src', function (err, src) {
-                            //    if (err) {
-                            //        callback('failed to pointer, error: ' + err, self.result);
-                            //        return;
-                            //    }
-                            //    var spl = src.data.atr.design_objective.split(',');
-                            //    parameters[idx].low = spl[0].split('(')[1];
-                            //    parameters[idx].high = spl[1].split(')')[0];
-                            //});
                         });
                         break;
 
@@ -262,6 +253,16 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                                 connections[idx].to = self.core.getParent(dst).data.atr.name + '.' + dst.data.atr.name;
                             });
                         });
+                        break;
+
+                    case 'passthrough_in':
+                        // Assembly to Component
+
+                        break;
+
+                    case 'passthrough_out':
+                        // Component to Assembly
+
                         break;
                 }
             });

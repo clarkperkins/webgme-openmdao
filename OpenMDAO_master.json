@@ -5,28 +5,93 @@
     "guid": "38c8f113-df7b-fc28-0d1a-f42d73d45254"
   },
   "relids": {
+    "01f24d07-6682-f951-19a2-fa99115d1bb3": "798211561",
+    "027db90e-b429-e45d-055b-b90ebf99ace0": "66669692",
+    "0665afb5-dea4-3b5d-f884-226407ee02e2": "1404853080",
+    "07a9fe62-51b3-5ed8-912c-8325ed126757": "813987817",
+    "097fa22c-bd4e-699a-33a5-b9573486a862": "1651910413",
+    "0b54f286-9b08-ae22-0dbb-e8fab97cbdad": "50513644",
     "0da0c46d-dab4-54cd-b2be-6c2264349da2": "1792980098",
+    "14ab51a3-c4d2-f4fe-f6e6-c49b0891dba3": "1631960089",
+    "16c54609-ab50-c4c6-9bda-107e902b9c47": "498863155",
     "18ea788b-2eb9-82a2-4370-a2944a99d51a": "562736667",
+    "1e126be9-2eb1-2f97-7889-61e8ed83cedd": "332429534",
     "1fcaa7c8-e7b1-31ac-10c7-b8ec7e97fc57": "512687710",
+    "26695cfa-92d5-86ba-cedc-de93931799a6": "1602479673",
     "26b7ba2b-2290-a298-76cb-523734dcd8d2": "758513781",
+    "26c1dc1b-4272-9376-f50d-710a00865853": "962306184",
+    "27349bbd-dc1b-959f-b1e6-ea40442c83c1": "267646630",
+    "2782a906-d5c0-b2d4-1f84-631a9df4c24f": "1146609523",
     "2a0fc65f-d2b8-00a6-71bd-84f257c54254": "610982904",
+    "2f60d591-52f5-9ab0-f61f-38131b85744b": "38502641",
+    "33bfe47b-91bb-8f27-f237-dc6c0e744f45": "629917562",
+    "34b6c803-f66c-351e-95df-935017d2aeb5": "1901089113",
     "35de2499-e5ab-19e6-240b-3cb6ecbb0c22": "381808471",
+    "376107c0-4216-c2db-6d0a-ef2931e8e2e8": "1112576865",
     "38c8f113-df7b-fc28-0d1a-f42d73d45254": null,
+    "3a2c4a4a-7f36-c113-2c40-b9a55ee5b736": "1016077390",
+    "3a8fd94b-1847-deac-b9d6-f40dfda1855e": "1999110512",
+    "3c7b21cf-9533-3d88-2f65-fc647d82df9b": "507587204",
+    "3ccb5f72-7e5e-bf6e-0087-268397fbaac5": "1263540761",
+    "42f6d3b2-6949-f380-2db9-dd806f1fbc07": "180211629",
     "437666a4-f664-4f35-cfd4-cb8f16b6a7b9": "1237026146",
+    "47f4dc68-1187-7548-2fb2-1847f900b10f": "1814947786",
     "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1": "1281655630",
+    "498db40f-7c9c-6656-04f4-9ba30fa0c805": "1601324517",
+    "5137ff2c-2a31-2374-621a-c8d6e054860c": "600912498",
+    "54f69cc6-a230-58f9-98bd-b06de7bcb527": "715457884",
+    "5a7569cc-50d2-9d30-0926-152e4fb98a3d": "206138085",
+    "67b7a8cc-e9ae-5721-b598-a66bb450c9f1": "969587791",
+    "6f84c78a-fbfe-4ad8-17d6-4e5f5847912a": "1534376883",
+    "72e4324d-9058-107f-9f3e-5d1a0603d2c4": "252194437",
+    "780a765f-779e-40a6-2708-6151067fe89d": "2041548839",
+    "7c7afd84-9b3a-57ef-0f7d-fd3ab1cd0877": "280958946",
     "7e59f579-fa65-a139-bcfe-664abf5a1a3b": "1135469800",
+    "7f099b2a-5470-0766-68fe-800f0ae5e0cf": "1706521533",
     "7f35695c-81f1-566b-3c77-3effd0805b83": "506965338",
+    "802a100f-b072-1ce5-c246-6195b6284c3a": "113664166",
+    "88603afe-7251-9e66-3508-4f48d38e94b6": "928048826",
+    "8fbcaf51-08f0-7a30-ff0b-2b0dc39e096f": "1105685561",
+    "90e4f20e-6cc7-a5ed-fe2b-1f61a3f0db34": "540355349",
+    "98305151-91a3-f21a-0909-7be081d873c4": "761878928",
+    "a1a48255-c2fa-a5d5-eb61-b86696c000e4": "1559348974",
+    "a1e10eb3-bcce-6ffb-0dfc-7d13a7337995": "38298075",
     "a461d7a6-abe0-a69e-e44f-d215340133b3": "651638879",
+    "a4992726-734b-f14c-c19b-7316183a75bd": "886703631",
+    "aa09847d-e97f-cd6c-1a43-b244c8f1a5dd": "2033001737",
     "ac65e230-3457-a31f-d780-ee21201daa30": "567570843",
     "af1db5f5-143a-fba6-9cd9-a55093e56125": "1628230356",
+    "b324d308-1b7a-20cd-3ddb-3117e4aca482": "1607899560",
+    "b82c559a-a4d5-0a08-d58b-2948f8274c23": "1504506862",
+    "c0acba00-6417-b89c-02d6-d35337ad17a7": "165860497",
+    "c0b950a4-e638-017c-72b4-4a93b56f1216": "46892621",
+    "c44f2e5e-8420-8ee2-16ba-d45e73a6b2ed": "1868526115",
+    "c585075c-b05c-ce0c-dde8-b41f4b0721f9": "238847391",
+    "c69699e8-cccf-5214-74a7-dcaa3d5cc833": "302484487",
     "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6": "853183009",
+    "c85fbcda-3c94-8668-b292-7ac10311bd43": "1416999311",
+    "c8ae1050-738d-0125-51f7-6da331eadbf7": "677855869",
+    "c96b7787-5a11-3b67-b9c7-f84a97173b56": "2023893122",
+    "ca91b57f-b751-f068-fb40-62a66f568f52": "312152178",
     "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045": "1",
     "cda0285c-2ca1-05d7-9625-1c5ca4d6d963": "1792904716",
     "ceb98f28-1c51-cb46-4d75-7bccf1ecd944": "441602185",
+    "d30999bf-f3eb-b305-0e5b-27004151af6f": "490899243",
+    "d4bcd0d0-0e17-637d-96cc-e559181ee64f": "243258643",
+    "d5b55b44-70b6-20c3-5012-57da9e61f294": "1204074580",
+    "d8385999-cd09-677c-5bdb-f880cc80f842": "1932635551",
+    "e191c406-524a-46d1-7deb-42ac5595d94c": "780239814",
     "e39ee0cb-b5ef-b41d-d9b4-11263972048a": "223935600",
+    "e5dc64bf-8c5b-af81-3550-12c3d8786e78": "538889191",
+    "ec0b6e7a-2834-bb4a-83a4-fac211bd0aad": "1104167431",
+    "ec3061ea-a9b6-c08d-2d6c-8286aa7487ef": "610285715",
+    "f252599e-f09e-5e89-e75e-fa4166723ad2": "1432873043",
+    "f3113d77-798e-a62f-a436-e8a4e31e3050": "1969799299",
+    "fad21136-e8d8-9fa0-9c5d-d2181ce36425": "420326518",
     "fd1b2bef-f859-49d2-e378-eba968ee639c": "803713342"
   },
   "containment": {
+    "027db90e-b429-e45d-055b-b90ebf99ace0": {},
     "18ea788b-2eb9-82a2-4370-a2944a99d51a": {
       "2a0fc65f-d2b8-00a6-71bd-84f257c54254": {
         "0da0c46d-dab4-54cd-b2be-6c2264349da2": {},
@@ -38,19 +103,195 @@
       "af1db5f5-143a-fba6-9cd9-a55093e56125": {},
       "fd1b2bef-f859-49d2-e378-eba968ee639c": {}
     },
+    "3a8fd94b-1847-deac-b9d6-f40dfda1855e": {
+      "27349bbd-dc1b-959f-b1e6-ea40442c83c1": {},
+      "2f60d591-52f5-9ab0-f61f-38131b85744b": {},
+      "33bfe47b-91bb-8f27-f237-dc6c0e744f45": {
+        "01f24d07-6682-f951-19a2-fa99115d1bb3": {},
+        "0b54f286-9b08-ae22-0dbb-e8fab97cbdad": {},
+        "1e126be9-2eb1-2f97-7889-61e8ed83cedd": {},
+        "26c1dc1b-4272-9376-f50d-710a00865853": {},
+        "2782a906-d5c0-b2d4-1f84-631a9df4c24f": {},
+        "5a7569cc-50d2-9d30-0926-152e4fb98a3d": {},
+        "6f84c78a-fbfe-4ad8-17d6-4e5f5847912a": {},
+        "72e4324d-9058-107f-9f3e-5d1a0603d2c4": {},
+        "802a100f-b072-1ce5-c246-6195b6284c3a": {},
+        "8fbcaf51-08f0-7a30-ff0b-2b0dc39e096f": {},
+        "a1e10eb3-bcce-6ffb-0dfc-7d13a7337995": {},
+        "c585075c-b05c-ce0c-dde8-b41f4b0721f9": {},
+        "ec3061ea-a9b6-c08d-2d6c-8286aa7487ef": {},
+        "f252599e-f09e-5e89-e75e-fa4166723ad2": {},
+        "f3113d77-798e-a62f-a436-e8a4e31e3050": {},
+        "fad21136-e8d8-9fa0-9c5d-d2181ce36425": {}
+      },
+      "34b6c803-f66c-351e-95df-935017d2aeb5": {},
+      "376107c0-4216-c2db-6d0a-ef2931e8e2e8": {},
+      "3a2c4a4a-7f36-c113-2c40-b9a55ee5b736": {},
+      "3ccb5f72-7e5e-bf6e-0087-268397fbaac5": {},
+      "42f6d3b2-6949-f380-2db9-dd806f1fbc07": {},
+      "47f4dc68-1187-7548-2fb2-1847f900b10f": {
+        "0665afb5-dea4-3b5d-f884-226407ee02e2": {},
+        "14ab51a3-c4d2-f4fe-f6e6-c49b0891dba3": {},
+        "16c54609-ab50-c4c6-9bda-107e902b9c47": {},
+        "26695cfa-92d5-86ba-cedc-de93931799a6": {},
+        "5137ff2c-2a31-2374-621a-c8d6e054860c": {},
+        "67b7a8cc-e9ae-5721-b598-a66bb450c9f1": {},
+        "780a765f-779e-40a6-2708-6151067fe89d": {},
+        "7c7afd84-9b3a-57ef-0f7d-fd3ab1cd0877": {},
+        "c85fbcda-3c94-8668-b292-7ac10311bd43": {},
+        "c8ae1050-738d-0125-51f7-6da331eadbf7": {},
+        "d8385999-cd09-677c-5bdb-f880cc80f842": {}
+      },
+      "54f69cc6-a230-58f9-98bd-b06de7bcb527": {},
+      "90e4f20e-6cc7-a5ed-fe2b-1f61a3f0db34": {},
+      "98305151-91a3-f21a-0909-7be081d873c4": {},
+      "a4992726-734b-f14c-c19b-7316183a75bd": {},
+      "b324d308-1b7a-20cd-3ddb-3117e4aca482": {},
+      "c0acba00-6417-b89c-02d6-d35337ad17a7": {},
+      "c44f2e5e-8420-8ee2-16ba-d45e73a6b2ed": {},
+      "c69699e8-cccf-5214-74a7-dcaa3d5cc833": {},
+      "c96b7787-5a11-3b67-b9c7-f84a97173b56": {},
+      "d4bcd0d0-0e17-637d-96cc-e559181ee64f": {
+        "07a9fe62-51b3-5ed8-912c-8325ed126757": {},
+        "097fa22c-bd4e-699a-33a5-b9573486a862": {},
+        "3c7b21cf-9533-3d88-2f65-fc647d82df9b": {},
+        "498db40f-7c9c-6656-04f4-9ba30fa0c805": {},
+        "7f099b2a-5470-0766-68fe-800f0ae5e0cf": {},
+        "88603afe-7251-9e66-3508-4f48d38e94b6": {},
+        "a1a48255-c2fa-a5d5-eb61-b86696c000e4": {},
+        "aa09847d-e97f-cd6c-1a43-b244c8f1a5dd": {},
+        "c0b950a4-e638-017c-72b4-4a93b56f1216": {},
+        "ca91b57f-b751-f068-fb40-62a66f568f52": {}
+      },
+      "d5b55b44-70b6-20c3-5012-57da9e61f294": {},
+      "e191c406-524a-46d1-7deb-42ac5595d94c": {},
+      "e5dc64bf-8c5b-af81-3550-12c3d8786e78": {},
+      "ec0b6e7a-2834-bb4a-83a4-fac211bd0aad": {}
+    },
     "7f35695c-81f1-566b-3c77-3effd0805b83": {
       "26b7ba2b-2290-a298-76cb-523734dcd8d2": {},
       "35de2499-e5ab-19e6-240b-3cb6ecbb0c22": {},
       "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1": {},
       "7e59f579-fa65-a139-bcfe-664abf5a1a3b": {},
       "a461d7a6-abe0-a69e-e44f-d215340133b3": {},
+      "b82c559a-a4d5-0a08-d58b-2948f8274c23": {},
       "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6": {},
       "ceb98f28-1c51-cb46-4d75-7bccf1ecd944": {},
+      "d30999bf-f3eb-b305-0e5b-27004151af6f": {},
       "e39ee0cb-b5ef-b41d-d9b4-11263972048a": {}
     },
     "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045": {}
   },
   "nodes": {
+    "01f24d07-6682-f951-19a2-fa99115d1bb3": {
+      "attributes": {
+        "name": "comp_ratio"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 77,
+          "y": 174
+        }
+      },
+      "sets": {}
+    },
+    "027db90e-b429-e45d-055b-b90ebf99ace0": {
+      "attributes": {},
+      "base": "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
+      "meta": {},
+      "parent": "38c8f113-df7b-fc28-0d1a-f42d73d45254",
+      "pointers": {
+        "base": "7e59f579-fa65-a139-bcfe-664abf5a1a3b"
+      },
+      "registry": {
+        "position": {
+          "x": 632,
+          "y": 224
+        }
+      },
+      "sets": {}
+    },
+    "0665afb5-dea4-3b5d-f884-226407ee02e2": {
+      "attributes": {
+        "name": "ratio2"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 51,
+          "y": 164
+        }
+      },
+      "sets": {}
+    },
+    "07a9fe62-51b3-5ed8-912c-8325ed126757": {
+      "attributes": {
+        "name": "engine_torque",
+        "unit": "N*m"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 263,
+          "y": 493
+        }
+      },
+      "sets": {}
+    },
+    "097fa22c-bd4e-699a-33a5-b9573486a862": {
+      "attributes": {
+        "name": "mass_vehicle",
+        "unit": "kg"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 59,
+          "y": 77
+        }
+      },
+      "sets": {}
+    },
+    "0b54f286-9b08-ae22-0dbb-e8fab97cbdad": {
+      "attributes": {
+        "name": "fuel_burn",
+        "unit": "L/s"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 510,
+          "y": 261
+        }
+      },
+      "sets": {}
+    },
     "0da0c46d-dab4-54cd-b2be-6c2264349da2": {
       "attributes": {
         "name": "x",
@@ -67,6 +308,42 @@
         "position": {
           "x": 89,
           "y": 200
+        }
+      },
+      "sets": {}
+    },
+    "14ab51a3-c4d2-f4fe-f6e6-c49b0891dba3": {
+      "attributes": {
+        "name": "ratio1"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 55,
+          "y": 90
+        }
+      },
+      "sets": {}
+    },
+    "16c54609-ab50-c4c6-9bda-107e902b9c47": {
+      "attributes": {
+        "name": "ratio4"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 54,
+          "y": 278
         }
       },
       "sets": {}
@@ -89,6 +366,24 @@
       },
       "sets": {}
     },
+    "1e126be9-2eb1-2f97-7889-61e8ed83cedd": {
+      "attributes": {
+        "name": "throttle"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 258,
+          "y": 626
+        }
+      },
+      "sets": {}
+    },
     "1fcaa7c8-e7b1-31ac-10c7-b8ec7e97fc57": {
       "attributes": {
         "name": "f_xy",
@@ -105,6 +400,25 @@
         "position": {
           "x": 440,
           "y": 225
+        }
+      },
+      "sets": {}
+    },
+    "26695cfa-92d5-86ba-cedc-de93931799a6": {
+      "attributes": {
+        "name": "velocity",
+        "unit": "mi/h"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 236,
+          "y": 610
         }
       },
       "sets": {}
@@ -160,6 +474,62 @@
       },
       "sets": {}
     },
+    "26c1dc1b-4272-9376-f50d-710a00865853": {
+      "attributes": {
+        "name": "engine_weight",
+        "unit": "kg"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 511,
+          "y": 338
+        }
+      },
+      "sets": {}
+    },
+    "27349bbd-dc1b-959f-b1e6-ea40442c83c1": {
+      "attributes": {},
+      "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+        "dst": "26695cfa-92d5-86ba-cedc-de93931799a6",
+        "src": "3a2c4a4a-7f36-c113-2c40-b9a55ee5b736"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "2782a906-d5c0-b2d4-1f84-631a9df4c24f": {
+      "attributes": {
+        "name": "RPM",
+        "unit": "rpm"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 258,
+          "y": 556
+        }
+      },
+      "sets": {}
+    },
     "2a0fc65f-d2b8-00a6-71bd-84f257c54254": {
       "attributes": {
         "class_name": "Paraboloid",
@@ -176,6 +546,62 @@
         "position": {
           "x": 333,
           "y": 55
+        }
+      },
+      "sets": {}
+    },
+    "2f60d591-52f5-9ab0-f61f-38131b85744b": {
+      "attributes": {
+        "name": "current_gear"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 6,
+          "y": 227
+        }
+      },
+      "sets": {}
+    },
+    "33bfe47b-91bb-8f27-f237-dc6c0e744f45": {
+      "attributes": {
+        "class_name": "Engine",
+        "name": "engine",
+        "package": "openmdao.examples.enginedesign.engine_wrap_c"
+      },
+      "base": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1"
+      },
+      "registry": {
+        "position": {
+          "x": 360,
+          "y": 188
+        }
+      },
+      "sets": {}
+    },
+    "34b6c803-f66c-351e-95df-935017d2aeb5": {
+      "attributes": {},
+      "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+        "dst": "ca91b57f-b751-f068-fb40-62a66f568f52",
+        "src": "ec0b6e7a-2834-bb4a-83a4-fac211bd0aad"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
         }
       },
       "sets": {}
@@ -239,6 +665,24 @@
         "position": {
           "x": 367,
           "y": 347
+        }
+      },
+      "sets": {}
+    },
+    "376107c0-4216-c2db-6d0a-ef2931e8e2e8": {
+      "attributes": {
+        "name": "throttle"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 10,
+          "y": 379
         }
       },
       "sets": {}
@@ -351,6 +795,16 @@
           },
           {
             "attributes": {},
+            "guid": "b82c559a-a4d5-0a08-d58b-2948f8274c23",
+            "registry": {
+              "position": {
+                "x": 533,
+                "y": 499
+              }
+            }
+          },
+          {
+            "attributes": {},
             "guid": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
             "registry": {
               "position": {
@@ -366,6 +820,16 @@
               "position": {
                 "x": 750,
                 "y": 271
+              }
+            }
+          },
+          {
+            "attributes": {},
+            "guid": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+            "registry": {
+              "position": {
+                "x": 29,
+                "y": 374
               }
             }
           },
@@ -396,8 +860,8 @@
             "guid": "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
             "registry": {
               "position": {
-                "x": 357,
-                "y": 400
+                "x": 378,
+                "y": 404
               }
             }
           },
@@ -443,11 +907,21 @@
           },
           {
             "attributes": {},
+            "guid": "b82c559a-a4d5-0a08-d58b-2948f8274c23",
+            "registry": {
+              "position": {
+                "x": 533,
+                "y": 499
+              }
+            }
+          },
+          {
+            "attributes": {},
             "guid": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
             "registry": {
               "position": {
-                "x": 71,
-                "y": 430
+                "x": 218,
+                "y": 503
               }
             }
           },
@@ -463,6 +937,16 @@
           },
           {
             "attributes": {},
+            "guid": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+            "registry": {
+              "position": {
+                "x": 43,
+                "y": 396
+              }
+            }
+          },
+          {
+            "attributes": {},
             "guid": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
             "registry": {
               "position": {
@@ -473,6 +957,96 @@
           }
         ]
       }
+    },
+    "3a2c4a4a-7f36-c113-2c40-b9a55ee5b736": {
+      "attributes": {
+        "name": "velocity"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 15,
+          "y": 314
+        }
+      },
+      "sets": {}
+    },
+    "3a8fd94b-1847-deac-b9d6-f40dfda1855e": {
+      "attributes": {
+        "name": "Vehicle"
+      },
+      "base": "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
+      "meta": {},
+      "parent": "38c8f113-df7b-fc28-0d1a-f42d73d45254",
+      "pointers": {
+        "base": "7e59f579-fa65-a139-bcfe-664abf5a1a3b"
+      },
+      "registry": {
+        "position": {
+          "x": 372,
+          "y": 310
+        }
+      },
+      "sets": {}
+    },
+    "3c7b21cf-9533-3d88-2f65-fc647d82df9b": {
+      "attributes": {
+        "name": "torque_ratio"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 263,
+          "y": 563
+        }
+      },
+      "sets": {}
+    },
+    "3ccb5f72-7e5e-bf6e-0087-268397fbaac5": {
+      "attributes": {},
+      "base": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
+        "dst": "88603afe-7251-9e66-3508-4f48d38e94b6",
+        "src": "26c1dc1b-4272-9376-f50d-710a00865853"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "42f6d3b2-6949-f380-2db9-dd806f1fbc07": {
+      "attributes": {
+        "name": "power"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 712,
+          "y": 87
+        }
+      },
+      "sets": {}
     },
     "437666a4-f664-4f35-cfd4-cb8f16b6a7b9": {
       "attributes": {},
@@ -492,6 +1066,26 @@
       },
       "sets": {}
     },
+    "47f4dc68-1187-7548-2fb2-1847f900b10f": {
+      "attributes": {
+        "class_name": "Transmission",
+        "name": "transmission",
+        "package": "openmdao.examples.enginedesign.transmission"
+      },
+      "base": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1"
+      },
+      "registry": {
+        "position": {
+          "x": 193,
+          "y": 142
+        }
+      },
+      "sets": {}
+    },
     "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1": {
       "attributes": {
         "class_name": "",
@@ -506,12 +1100,12 @@
             -1
           ],
           "maxItems": [
-            1,
+            -1,
             -1
           ],
           "items": [
-            "a461d7a6-abe0-a69e-e44f-d215340133b3",
-            "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+            "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+            "a461d7a6-abe0-a69e-e44f-d215340133b3"
           ]
         },
         "attributes": {
@@ -538,6 +1132,172 @@
       },
       "sets": {}
     },
+    "498db40f-7c9c-6656-04f4-9ba30fa0c805": {
+      "attributes": {
+        "name": "Cf"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 61,
+          "y": 147
+        }
+      },
+      "sets": {}
+    },
+    "5137ff2c-2a31-2374-621a-c8d6e054860c": {
+      "attributes": {
+        "name": "torque_ratio"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 591,
+          "y": 192
+        }
+      },
+      "sets": {}
+    },
+    "54f69cc6-a230-58f9-98bd-b06de7bcb527": {
+      "attributes": {},
+      "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+        "dst": "c8ae1050-738d-0125-51f7-6da331eadbf7",
+        "src": "ec0b6e7a-2834-bb4a-83a4-fac211bd0aad"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "5a7569cc-50d2-9d30-0926-152e4fb98a3d": {
+      "attributes": {
+        "name": "bore",
+        "unit": "mm"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 77,
+          "y": 74
+        }
+      },
+      "sets": {}
+    },
+    "67b7a8cc-e9ae-5721-b598-a66bb450c9f1": {
+      "attributes": {
+        "name": "ratio5"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 49,
+          "y": 340
+        }
+      },
+      "sets": {}
+    },
+    "6f84c78a-fbfe-4ad8-17d6-4e5f5847912a": {
+      "attributes": {
+        "name": "spark_angle",
+        "unit": "deg"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 77,
+          "y": 224
+        }
+      },
+      "sets": {}
+    },
+    "72e4324d-9058-107f-9f3e-5d1a0603d2c4": {
+      "attributes": {
+        "name": "L_v",
+        "unit": "mm"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 77,
+          "y": 424
+        }
+      },
+      "sets": {}
+    },
+    "780a765f-779e-40a6-2708-6151067fe89d": {
+      "attributes": {
+        "name": "ratio3"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 51,
+          "y": 217
+        }
+      },
+      "sets": {}
+    },
+    "7c7afd84-9b3a-57ef-0f7d-fd3ab1cd0877": {
+      "attributes": {
+        "name": "RPM",
+        "unit": "rpm"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 590,
+          "y": 273
+        }
+      },
+      "sets": {}
+    },
     "7e59f579-fa65-a139-bcfe-664abf5a1a3b": {
       "attributes": {
         "name": "Assembly"
@@ -550,6 +1310,10 @@
             -1,
             -1,
             -1,
+            -1,
+            -1,
+            -1,
+            -1,
             -1
           ],
           "maxItems": [
@@ -557,14 +1321,22 @@
             -1,
             1,
             -1,
+            -1,
+            -1,
+            -1,
+            -1,
             -1
           ],
           "items": [
-            "26b7ba2b-2290-a298-76cb-523734dcd8d2",
+            "d30999bf-f3eb-b305-0e5b-27004151af6f",
             "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
             "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
+            "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
+            "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+            "a461d7a6-abe0-a69e-e44f-d215340133b3",
+            "b82c559a-a4d5-0a08-d58b-2948f8274c23",
             "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
-            "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1"
+            "26b7ba2b-2290-a298-76cb-523734dcd8d2"
           ]
         }
       },
@@ -577,6 +1349,25 @@
         "position": {
           "x": 372,
           "y": 28
+        }
+      },
+      "sets": {}
+    },
+    "7f099b2a-5470-0766-68fe-800f0ae5e0cf": {
+      "attributes": {
+        "name": "acceleration",
+        "unit": "m/(s*s)"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 559,
+          "y": 151
         }
       },
       "sets": {}
@@ -612,9 +1403,140 @@
       },
       "sets": {}
     },
+    "802a100f-b072-1ce5-c246-6195b6284c3a": {
+      "attributes": {
+        "name": "IVC",
+        "unit": "deg"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 77,
+          "y": 374
+        }
+      },
+      "sets": {}
+    },
+    "88603afe-7251-9e66-3508-4f48d38e94b6": {
+      "attributes": {
+        "name": "mass_engine",
+        "unit": "kg"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 263,
+          "y": 373
+        }
+      },
+      "sets": {}
+    },
+    "8fbcaf51-08f0-7a30-ff0b-2b0dc39e096f": {
+      "attributes": {
+        "name": "D_v",
+        "unit": "mm"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 80,
+          "y": 470
+        }
+      },
+      "sets": {}
+    },
+    "90e4f20e-6cc7-a5ed-fe2b-1f61a3f0db34": {
+      "attributes": {},
+      "base": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
+        "dst": "2782a906-d5c0-b2d4-1f84-631a9df4c24f",
+        "src": "7c7afd84-9b3a-57ef-0f7d-fd3ab1cd0877"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "98305151-91a3-f21a-0909-7be081d873c4": {
+      "attributes": {},
+      "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+        "dst": "a1a48255-c2fa-a5d5-eb61-b86696c000e4",
+        "src": "3a2c4a4a-7f36-c113-2c40-b9a55ee5b736"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "a1a48255-c2fa-a5d5-eb61-b86696c000e4": {
+      "attributes": {
+        "name": "velocity",
+        "unit": "m/s"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 263,
+          "y": 433
+        }
+      },
+      "sets": {}
+    },
+    "a1e10eb3-bcce-6ffb-0dfc-7d13a7337995": {
+      "attributes": {
+        "name": "conrod",
+        "unit": "mm"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 77,
+          "y": 124
+        }
+      },
+      "sets": {}
+    },
     "a461d7a6-abe0-a69e-e44f-d215340133b3": {
       "attributes": {
-        "name": "C_OUT",
+        "name": "output",
         "unit": "",
         "value": ""
       },
@@ -641,6 +1563,42 @@
         "position": {
           "x": 267,
           "y": 239
+        }
+      },
+      "sets": {}
+    },
+    "a4992726-734b-f14c-c19b-7316183a75bd": {
+      "attributes": {},
+      "base": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
+        "dst": "3c7b21cf-9533-3d88-2f65-fc647d82df9b",
+        "src": "5137ff2c-2a31-2374-621a-c8d6e054860c"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "aa09847d-e97f-cd6c-1a43-b244c8f1a5dd": {
+      "attributes": {
+        "name": "Cd"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 61,
+          "y": 207
         }
       },
       "sets": {}
@@ -687,6 +1645,168 @@
       },
       "sets": {}
     },
+    "b324d308-1b7a-20cd-3ddb-3117e4aca482": {
+      "attributes": {},
+      "base": "b82c559a-a4d5-0a08-d58b-2948f8274c23",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "b82c559a-a4d5-0a08-d58b-2948f8274c23",
+        "dst": "e5dc64bf-8c5b-af81-3550-12c3d8786e78",
+        "src": "7f099b2a-5470-0766-68fe-800f0ae5e0cf"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "b82c559a-a4d5-0a08-d58b-2948f8274c23": {
+      "attributes": {
+        "name": "passthrough_out"
+      },
+      "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
+      "meta": {
+        "pointers": {
+          "src": {
+            "items": [
+              "a461d7a6-abe0-a69e-e44f-d215340133b3"
+            ],
+            "min": 1,
+            "max": 1,
+            "minItems": [
+              -1
+            ],
+            "maxItems": [
+              1
+            ]
+          },
+          "dst": {
+            "items": [
+              "a461d7a6-abe0-a69e-e44f-d215340133b3"
+            ],
+            "min": 1,
+            "max": 1,
+            "minItems": [
+              -1
+            ],
+            "maxItems": [
+              1
+            ]
+          }
+        }
+      },
+      "parent": "7f35695c-81f1-566b-3c77-3effd0805b83",
+      "pointers": {
+        "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
+        "dst": null,
+        "src": null
+      },
+      "registry": {
+        "DisplayFormat": "",
+        "isAbstract": false,
+        "lineEndArrow": "block-xwide-xlong",
+        "position": {
+          "x": 249,
+          "y": 458
+        }
+      },
+      "sets": {}
+    },
+    "c0acba00-6417-b89c-02d6-d35337ad17a7": {
+      "attributes": {},
+      "base": "b82c559a-a4d5-0a08-d58b-2948f8274c23",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "b82c559a-a4d5-0a08-d58b-2948f8274c23",
+        "dst": "c69699e8-cccf-5214-74a7-dcaa3d5cc833",
+        "src": "0b54f286-9b08-ae22-0dbb-e8fab97cbdad"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "c0b950a4-e638-017c-72b4-4a93b56f1216": {
+      "attributes": {
+        "name": "area",
+        "unit": "m**2"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 60,
+          "y": 280
+        }
+      },
+      "sets": {}
+    },
+    "c44f2e5e-8420-8ee2-16ba-d45e73a6b2ed": {
+      "attributes": {},
+      "base": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
+        "dst": "07a9fe62-51b3-5ed8-912c-8325ed126757",
+        "src": "f3113d77-798e-a62f-a436-e8a4e31e3050"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "c585075c-b05c-ce0c-dde8-b41f4b0721f9": {
+      "attributes": {
+        "name": "stroke",
+        "unit": "mm"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 77,
+          "y": 24
+        }
+      },
+      "sets": {}
+    },
+    "c69699e8-cccf-5214-74a7-dcaa3d5cc833": {
+      "attributes": {
+        "name": "fuel_burn"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 712,
+          "y": 160
+        }
+      },
+      "sets": {}
+    },
     "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6": {
       "attributes": {
         "name": "connection"
@@ -729,11 +1849,86 @@
         "src": null
       },
       "registry": {
+        "DisplayFormat": "",
         "isAbstract": false,
         "lineEndArrow": "block-xwide-xlong",
         "position": {
           "x": 141,
           "y": 350
+        }
+      },
+      "sets": {}
+    },
+    "c85fbcda-3c94-8668-b292-7ac10311bd43": {
+      "attributes": {
+        "name": "current_gear"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 240,
+          "y": 548
+        }
+      },
+      "sets": {}
+    },
+    "c8ae1050-738d-0125-51f7-6da331eadbf7": {
+      "attributes": {
+        "name": "tire_circumference",
+        "unit": "inch"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 50,
+          "y": 463
+        }
+      },
+      "sets": {}
+    },
+    "c96b7787-5a11-3b67-b9c7-f84a97173b56": {
+      "attributes": {},
+      "base": "b82c559a-a4d5-0a08-d58b-2948f8274c23",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "b82c559a-a4d5-0a08-d58b-2948f8274c23",
+        "dst": "42f6d3b2-6949-f380-2db9-dd806f1fbc07",
+        "src": "fad21136-e8d8-9fa0-9c5d-d2181ce36425"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "ca91b57f-b751-f068-fb40-62a66f568f52": {
+      "attributes": {
+        "name": "tire_circ",
+        "unit": "m"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "d4bcd0d0-0e17-637d-96cc-e559181ee64f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 263,
+          "y": 633
         }
       },
       "sets": {}
@@ -849,9 +2044,135 @@
       },
       "sets": {}
     },
+    "d30999bf-f3eb-b305-0e5b-27004151af6f": {
+      "attributes": {
+        "name": "passthrough_in"
+      },
+      "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
+      "meta": {
+        "pointers": {
+          "src": {
+            "items": [
+              "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+            ],
+            "min": 1,
+            "max": 1,
+            "minItems": [
+              -1
+            ],
+            "maxItems": [
+              1
+            ]
+          },
+          "dst": {
+            "items": [
+              "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+            ],
+            "min": 1,
+            "max": 1,
+            "minItems": [
+              -1
+            ],
+            "maxItems": [
+              1
+            ]
+          }
+        }
+      },
+      "parent": "7f35695c-81f1-566b-3c77-3effd0805b83",
+      "pointers": {
+        "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
+        "dst": null,
+        "src": null
+      },
+      "registry": {
+        "DisplayFormat": "",
+        "isAbstract": false,
+        "lineEndArrow": "block-xwide-xlong",
+        "position": {
+          "x": 64,
+          "y": 434
+        }
+      },
+      "sets": {}
+    },
+    "d4bcd0d0-0e17-637d-96cc-e559181ee64f": {
+      "attributes": {
+        "class_name": "Chassis",
+        "name": "chassis",
+        "package": "openmdao.examples.enginedesign.chassis"
+      },
+      "base": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1"
+      },
+      "registry": {
+        "position": {
+          "x": 551,
+          "y": 210
+        }
+      },
+      "sets": {}
+    },
+    "d5b55b44-70b6-20c3-5012-57da9e61f294": {
+      "attributes": {},
+      "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+        "dst": "c85fbcda-3c94-8668-b292-7ac10311bd43",
+        "src": "2f60d591-52f5-9ab0-f61f-38131b85744b"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
+    "d8385999-cd09-677c-5bdb-f880cc80f842": {
+      "attributes": {
+        "name": "final_drive_ratio"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "47f4dc68-1187-7548-2fb2-1847f900b10f",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 51,
+          "y": 401
+        }
+      },
+      "sets": {}
+    },
+    "e191c406-524a-46d1-7deb-42ac5595d94c": {
+      "attributes": {},
+      "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+        "dst": "1e126be9-2eb1-2f97-7889-61e8ed83cedd",
+        "src": "376107c0-4216-c2db-6d0a-ef2931e8e2e8"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
     "e39ee0cb-b5ef-b41d-d9b4-11263972048a": {
       "attributes": {
-        "name": "C_IN",
+        "name": "input",
         "unit": "",
         "value": ""
       },
@@ -878,6 +2199,117 @@
         "position": {
           "x": 67,
           "y": 236
+        }
+      },
+      "sets": {}
+    },
+    "e5dc64bf-8c5b-af81-3550-12c3d8786e78": {
+      "attributes": {
+        "name": "acceleration"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 711,
+          "y": 238
+        }
+      },
+      "sets": {}
+    },
+    "ec0b6e7a-2834-bb4a-83a4-fac211bd0aad": {
+      "attributes": {
+        "name": "tire_circumference"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "3a8fd94b-1847-deac-b9d6-f40dfda1855e",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": -1,
+          "y": 450
+        }
+      },
+      "sets": {}
+    },
+    "ec3061ea-a9b6-c08d-2d6c-8286aa7487ef": {
+      "attributes": {
+        "name": "IVO",
+        "unit": "deg"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 81,
+          "y": 321
+        }
+      },
+      "sets": {}
+    },
+    "f252599e-f09e-5e89-e75e-fa4166723ad2": {
+      "attributes": {
+        "name": "n_cyl"
+      },
+      "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a"
+      },
+      "registry": {
+        "position": {
+          "x": 77,
+          "y": 274
+        }
+      },
+      "sets": {}
+    },
+    "f3113d77-798e-a62f-a436-e8a4e31e3050": {
+      "attributes": {
+        "name": "torque",
+        "unit": "N*m"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 512,
+          "y": 186
+        }
+      },
+      "sets": {}
+    },
+    "fad21136-e8d8-9fa0-9c5d-d2181ce36425": {
+      "attributes": {
+        "name": "power",
+        "unit": "kW"
+      },
+      "base": "a461d7a6-abe0-a69e-e44f-d215340133b3",
+      "meta": {},
+      "parent": "33bfe47b-91bb-8f27-f237-dc6c0e744f45",
+      "pointers": {
+        "base": "a461d7a6-abe0-a69e-e44f-d215340133b3"
+      },
+      "registry": {
+        "position": {
+          "x": 514,
+          "y": 107
         }
       },
       "sets": {}
