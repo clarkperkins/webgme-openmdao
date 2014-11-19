@@ -407,7 +407,8 @@
     "26695cfa-92d5-86ba-cedc-de93931799a6": {
       "attributes": {
         "name": "velocity",
-        "unit": "mi/h"
+        "unit": "mi/h",
+        "value": "25.0"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -465,6 +466,7 @@
         "src": null
       },
       "registry": {
+        "color": "#9999ff",
         "isAbstract": false,
         "lineEndArrow": "block-xwide-xlong",
         "position": {
@@ -544,15 +546,16 @@
       },
       "registry": {
         "position": {
-          "x": 333,
-          "y": 55
+          "x": 328,
+          "y": 48
         }
       },
       "sets": {}
     },
     "2f60d591-52f5-9ab0-f61f-38131b85744b": {
       "attributes": {
-        "name": "current_gear"
+        "name": "current_gear",
+        "value": "0"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -660,6 +663,7 @@
         "src": null
       },
       "registry": {
+        "color": "#99ff99",
         "isAbstract": false,
         "lineEndArrow": "block-xwide-xlong",
         "position": {
@@ -671,7 +675,8 @@
     },
     "376107c0-4216-c2db-6d0a-ef2931e8e2e8": {
       "attributes": {
-        "name": "throttle"
+        "name": "throttle",
+        "value": "0.5"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -870,8 +875,8 @@
             "guid": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
             "registry": {
               "position": {
-                "x": 271,
-                "y": 133
+                "x": 269,
+                "y": 130
               }
             }
           },
@@ -961,7 +966,8 @@
     "3a2c4a4a-7f36-c113-2c40-b9a55ee5b736": {
       "attributes": {
         "name": "velocity",
-        "unit": "mi/h"
+        "unit": "mi/h",
+        "value": "25.0"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -1090,9 +1096,9 @@
     },
     "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1": {
       "attributes": {
-        "class_name": "",
+        "class_name": "Component",
         "name": "Component",
-        "package": ""
+        "package": "openmdao.main.component"
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
@@ -1113,11 +1119,24 @@
         "attributes": {
           "package": {
             "type": "string",
-            "default": ""
+            "default": "openmdao.main.component",
+            "enum": [
+              "openmdao.examples.simple.paraboloid",
+              "openmdao.examples.enginedesign.chassis",
+              "openmdao.examples.enginedesign.engine_wrap_c",
+              "openmdao.examples.enginedesign.transmission",
+              ""
+            ]
           },
           "class_name": {
             "type": "string",
-            "default": ""
+            "default": "Component",
+            "enum": [
+              "Paraboloid",
+              "Chassis",
+              "Engine",
+              "Transmission"
+            ]
           }
         }
       },
@@ -1126,6 +1145,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "color": "#ccccff",
         "isAbstract": false,
         "position": {
           "x": 180,
@@ -1321,23 +1341,23 @@
           "maxItems": [
             -1,
             -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
             1,
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,
             -1
           ],
           "items": [
             "d30999bf-f3eb-b305-0e5b-27004151af6f",
             "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
-            "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
-            "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
-            "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
-            "a461d7a6-abe0-a69e-e44f-d215340133b3",
             "b82c559a-a4d5-0a08-d58b-2948f8274c23",
             "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
+            "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+            "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
+            "a461d7a6-abe0-a69e-e44f-d215340133b3",
+            "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
             "26b7ba2b-2290-a298-76cb-523734dcd8d2"
           ]
         }
@@ -1347,6 +1367,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "color": "#ffe6cc",
         "isAbstract": false,
         "position": {
           "x": 372,
@@ -1397,6 +1418,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "decorator": "empty",
         "isAbstract": false,
         "position": {
           "x": 401,
@@ -1501,7 +1523,8 @@
     "a1a48255-c2fa-a5d5-eb61-b86696c000e4": {
       "attributes": {
         "name": "velocity",
-        "unit": "m/s"
+        "unit": "m/s",
+        "value": "25.0"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -1560,6 +1583,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "color": "#ccffcc",
         "isAbstract": false,
         "isPort": true,
         "position": {
@@ -1631,7 +1655,7 @@
         "class_name": "SLSQPdriver",
         "name": "driver",
         "objective": "parabaloid.f_xy",
-        "package": "openmdao.lib.drivers.api"
+        "package": "openmdao.lib.drivers.slsqpdriver"
       },
       "base": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
       "meta": {},
@@ -1641,8 +1665,8 @@
       },
       "registry": {
         "position": {
-          "x": 424,
-          "y": 285
+          "x": 420,
+          "y": 279
         }
       },
       "sets": {}
@@ -2002,23 +2026,32 @@
     },
     "ceb98f28-1c51-cb46-4d75-7bccf1ecd944": {
       "attributes": {
-        "class_name": "",
+        "class_name": "Driver",
         "hasObjective": false,
         "hasObjectives": false,
         "hasParameters": false,
         "name": "Driver",
-        "package": ""
+        "package": "openmdao.main.driver"
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
         "attributes": {
           "class_name": {
             "type": "string",
-            "default": ""
+            "default": "Driver",
+            "enum": [
+              "SLSQPdriver",
+              "CONMINdriver",
+              ""
+            ]
           },
           "package": {
             "type": "string",
-            "default": ""
+            "default": "openmdao.main.driver",
+            "enum": [
+              "openmdao.lib.drivers.api",
+              "openmdao.lib.drivers.slsqpdriver"
+            ]
           },
           "hasParameters": {
             "type": "boolean",
@@ -2039,10 +2072,11 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "color": "#99ff99",
         "isAbstract": false,
         "position": {
-          "x": 598,
-          "y": 140
+          "x": 600,
+          "y": 142
         }
       },
       "sets": {}
@@ -2197,6 +2231,7 @@
         "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045"
       },
       "registry": {
+        "color": "#99ffff",
         "isAbstract": false,
         "isPort": true,
         "position": {
