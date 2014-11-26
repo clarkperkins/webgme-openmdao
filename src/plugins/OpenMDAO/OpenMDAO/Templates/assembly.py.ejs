@@ -88,6 +88,8 @@ if __name__ == '__main__':
 		# Save file and then write to html
 		fileName = "out_" + str(i) + ".png"
 		tempStr = '<img src=\"' + fileName + '\">\n'
+		op = "x: {}<br> y: {}<br> f(x, y): {}<br>".format(x[i], y[i], f_xy[i])
+		f.write('<h2>Iteration ' + str(i) + ': </h2>' + op + '</p>\n')
 		f.write(tempStr)
 		p.savefig(fileName)
     print 'Optimized values:'
@@ -98,5 +100,10 @@ if __name__ == '__main__':
     p.savefig('final.png')
     p.ioff()
     f.write('<h1> Final iteration of optimization </h1>')
+    for i in range(len(x)-1, len(x)):
+    	op = "x: {}<br> y: {}<br> f(x, y): {}<br>".format(x[i], y[i], f_xy[i])
+    	op2 = "x: {} y: {} f(x, y): {}".format(x[i], y[i], f_xy[i])
+    	f.write('<h2>' + op + '</h2>\n')
+    	print op2
     f.write('<img src=\"final.png\">')
     f.write('</body>\n</html>')
