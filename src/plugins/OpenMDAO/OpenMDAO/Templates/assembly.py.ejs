@@ -20,6 +20,9 @@ class <%= name %>(Assembly):
         <% if (driver) { %>
         # Driver
         self.add('driver', <%= driver.class_name %>())
+        <% if (driver.class_name === 'DOEdriver') { %>
+        self.driver.DOEgenerator = Uniform(1000)
+        <% } %>
         <% } %>
 
         # Components
@@ -36,6 +39,11 @@ class <%= name %>(Assembly):
         # Objectives
         <% objectives.forEach(function (objective) { %>
         self.driver.add_objective('<%= objective.name %>')
+        <% }) %>
+
+        # Responses
+        <% responses.forEach(function (response) { %>
+        self.driver.add_response('<%= response.name %>')
         <% }) %>
 
         # Parameters

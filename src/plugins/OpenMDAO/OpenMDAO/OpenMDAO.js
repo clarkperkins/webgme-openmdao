@@ -172,6 +172,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             var components = [];
             var driver = null;
             var objectives = [];
+            var responses = [];
             var parameters = [];
             var connections = [];
             var potentialPassthroughs = [];
@@ -240,6 +241,21 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                                 name: self.core.getParent(src).data.atr.name + '.' + src.data.atr.name
                             };
                             
+                        });
+                        break;
+
+                    case 'response':
+                        // This is an response, since it goes TO the driver
+                        self.core.loadPointer(node, 'src', function (err, src) {
+                            if (err) {
+                                callback('failed to pointer, error: ' + err, self.result);
+                                return;
+                            }
+
+                            responses[responses.length] = {
+                                name: self.core.getParent(src).data.atr.name + '.' + src.data.atr.name
+                            };
+
                         });
                         break;
 
@@ -366,7 +382,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 }
             });
 
-            self.generatePython(assemblyName, driver, components, objectives, parameters, connections, potentialPassthroughs, callback);
+            self.generatePython(assemblyName, driver, components, objectives, responses, parameters, connections, potentialPassthroughs, callback);
         };
 
         self.core.loadChildren(self.activeNode, afterLoading);
@@ -378,12 +394,13 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
      * @param driver
      * @param components
      * @param objectives
+     * @param responses
      * @param parameters
      * @param connections
      * @param passthroughs
      * @param callback
      */
-    OpenMDAO.prototype.generatePython = function (assemblyName, driver, components, objectives, parameters, connections, passthroughs, callback) {
+    OpenMDAO.prototype.generatePython = function (assemblyName, driver, components, objectives, responses, parameters, connections, passthroughs, callback) {
         // First transform ejs-files into js files (needed for client-side runs) -> run Templates/combine_templates.js.
         // See instructions in file. You must run this after any modifications to the ejs template.
         var self = this;
@@ -409,6 +426,14 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             if (uniqueImports[driver.package].indexOf(driver.class_name) == -1) {
                 var idx = uniqueImports[driver.package].length;
                 uniqueImports[driver.package][idx] = driver.class_name;
+            }
+            // Add uniform import for DOEdriver
+            if (driver.class_name === 'DOEdriver') {
+                var uniformPackage = 'openmdao.lib.doegenerators.api';
+                if (!uniqueImports.hasOwnProperty(uniformPackage)) {
+                    uniqueImports[uniformPackage] = [];
+                }
+                uniqueImports[uniformPackage][uniqueImports[uniformPackage].length] = 'Uniform';
             }
         }
 
@@ -480,36 +505,64 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 components: components,
                 uniqueImports: joinedImports,
                 objectives: objectives,
+                responses: responses,
                 parameters: parameters,
                 connections: connections,
                 passthroughs: finalPassthroughs,
                 inputs: inputs
             });
 
-        var templateFileName = self.activeNode.data.atr.name.toLowerCase()+'/'+assemblyName+'.py';
+        var jsonInfo = {
+            title: self.activeNode.data.atr.name,
+            description: self.activeNode.data.atr.description
+        };
+
+        var templateDir = self.activeNode.data.atr.name.toLowerCase() + '/';
+
+        var templateBash = ejs.render(
+            TEMPLATES['run.ejs'],
+            {
+                mainFile: templateDir+self.activeNode.data.atr.name.toLowerCase()+'.py',
+                htmlFile: self.activeNode.data.atr.name+'.html'
+            }
+        );
+
+        var templateFileName = templateDir+templateDir+assemblyName+'.py';
         var artifact = self.blobClient.createArtifact('templateFiles');
         artifact.addFile(templateFileName, templatePY, function (err) {
             if (err) {
                 callback(err, self.result);
                 return;
             }
-            artifact.addFile(self.activeNode.data.atr.name.toLowerCase()+'/__init__.py', '', function (err) {
+            artifact.addFile(templateDir+templateDir+'__init__.py', '', function (err) {
                 if (err) {
                     callback(err, self.result);
                     return;
                 }
-                self.blobClient.saveAllArtifacts(function (err, hashes) {
+                artifact.addFile(templateDir+'info.json', JSON.stringify(jsonInfo), function (err) {
                     if (err) {
                         callback(err, self.result);
                         return;
                     }
-                    // This will add a download hyperlink in the result-dialog.
-                    self.result.addArtifact(hashes[0]);
-                    // This will save the changes. If you don't want to save;
-                    // exclude self.save and call callback directly from this scope.
-                    self.result.setSuccess(true);
-                    self.save('added obj', function (err) {
-                        callback(null, self.result);
+                    artifact.addFile(templateDir+'run', templateBash, function (err) {
+                        if (err) {
+                            callback(err, self.result);
+                            return;
+                        }
+                        self.blobClient.saveAllArtifacts(function (err, hashes) {
+                            if (err) {
+                                callback(err, self.result);
+                                return;
+                            }
+                            // This will add a download hyperlink in the result-dialog.
+                            self.result.addArtifact(hashes[0]);
+                            // This will save the changes. If you don't want to save;
+                            // exclude self.save and call callback directly from this scope.
+                            self.result.setSuccess(true);
+                            self.save('added obj', function (err) {
+                                callback(null, self.result);
+                            });
+                        });
                     });
                 });
             });
