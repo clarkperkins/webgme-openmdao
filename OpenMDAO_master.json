@@ -30,21 +30,22 @@
     "34b6c803-f66c-351e-95df-935017d2aeb5": "1901089113",
     "35de2499-e5ab-19e6-240b-3cb6ecbb0c22": "381808471",
     "376107c0-4216-c2db-6d0a-ef2931e8e2e8": "1112576865",
+    "37c4dc5e-7e7e-afd2-c2d4-db3d4350a5b2": "1822090430",
     "38c8f113-df7b-fc28-0d1a-f42d73d45254": null,
     "39ad3af2-13e1-3def-de91-e8f836197ce6": "1170463609",
     "3a2c4a4a-7f36-c113-2c40-b9a55ee5b736": "1016077390",
     "3a8fd94b-1847-deac-b9d6-f40dfda1855e": "1999110512",
+    "3ad18894-24b6-e3df-4b02-bf917a37f802": "513973949",
     "3c7b21cf-9533-3d88-2f65-fc647d82df9b": "507587204",
     "3ccb5f72-7e5e-bf6e-0087-268397fbaac5": "1263540761",
     "42f6d3b2-6949-f380-2db9-dd806f1fbc07": "180211629",
-    "437666a4-f664-4f35-cfd4-cb8f16b6a7b9": "1237026146",
     "47f4dc68-1187-7548-2fb2-1847f900b10f": "1814947786",
     "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1": "1281655630",
     "498db40f-7c9c-6656-04f4-9ba30fa0c805": "1601324517",
     "5137ff2c-2a31-2374-621a-c8d6e054860c": "600912498",
     "54f69cc6-a230-58f9-98bd-b06de7bcb527": "715457884",
     "5a7569cc-50d2-9d30-0926-152e4fb98a3d": "206138085",
-    "5b36aef2-0e46-0dcd-a909-0a08a700a84b": "1168797452",
+    "5fb05576-0a6a-8e82-cf8d-d350cbfba564": "759567249",
     "67b7a8cc-e9ae-5721-b598-a66bb450c9f1": "969587791",
     "6f84c78a-fbfe-4ad8-17d6-4e5f5847912a": "1534376883",
     "6fc07b93-8f9d-a6be-c0f6-92ae3d91a7b3": "102671986",
@@ -56,8 +57,10 @@
     "7f35695c-81f1-566b-3c77-3effd0805b83": "506965338",
     "802a100f-b072-1ce5-c246-6195b6284c3a": "113664166",
     "835366d5-013d-3bc3-2bb5-466d4b6150db": "1833872137",
+    "84671374-a050-f758-59eb-5479f5c11d1c": "571606589",
     "8612cfdd-4925-61a1-579b-0a8990b9d332": "1044790610",
     "88603afe-7251-9e66-3508-4f48d38e94b6": "928048826",
+    "8a91fb20-6ef2-7e1d-3fed-a2993d550bcd": "955711784",
     "8fbcaf51-08f0-7a30-ff0b-2b0dc39e096f": "1105685561",
     "90e4f20e-6cc7-a5ed-fe2b-1f61a3f0db34": "540355349",
     "9152dcac-d33e-8732-ef07-7e101a5fd301": "493064691",
@@ -70,8 +73,6 @@
     "a81a6388-0583-f0ef-ad64-8187b470fbc6": "1015020244",
     "aa09847d-e97f-cd6c-1a43-b244c8f1a5dd": "2033001737",
     "ac07744b-f7e3-f1b1-7fdd-929aacd7385d": "1907098373",
-    "ac65e230-3457-a31f-d780-ee21201daa30": "567570843",
-    "af1db5f5-143a-fba6-9cd9-a55093e56125": "1628230356",
     "b324d308-1b7a-20cd-3ddb-3117e4aca482": "1607899560",
     "b82c559a-a4d5-0a08-d58b-2948f8274c23": "1504506862",
     "c0acba00-6417-b89c-02d6-d35337ad17a7": "165860497",
@@ -106,14 +107,13 @@
     "f252599e-f09e-5e89-e75e-fa4166723ad2": "1432873043",
     "f3113d77-798e-a62f-a436-e8a4e31e3050": "1969799299",
     "f68de4ba-9c0a-6bc9-3eee-c976092e817f": "1631125726",
-    "fad21136-e8d8-9fa0-9c5d-d2181ce36425": "420326518",
-    "fd1b2bef-f859-49d2-e378-eba968ee639c": "803713342"
+    "fad21136-e8d8-9fa0-9c5d-d2181ce36425": "420326518"
   },
   "containment": {
     "027db90e-b429-e45d-055b-b90ebf99ace0": {
       "0a35d330-fc26-73c4-3955-5e44f2b62846": {},
       "3270adcf-8bf0-a047-5fda-ad94656ed4df": {},
-      "5b36aef2-0e46-0dcd-a909-0a08a700a84b": {},
+      "3ad18894-24b6-e3df-4b02-bf917a37f802": {},
       "6fc07b93-8f9d-a6be-c0f6-92ae3d91a7b3": {},
       "835366d5-013d-3bc3-2bb5-466d4b6150db": {},
       "8612cfdd-4925-61a1-579b-0a8990b9d332": {},
@@ -140,10 +140,10 @@
         "1fcaa7c8-e7b1-31ac-10c7-b8ec7e97fc57": {},
         "cda0285c-2ca1-05d7-9625-1c5ca4d6d963": {}
       },
-      "437666a4-f664-4f35-cfd4-cb8f16b6a7b9": {},
-      "ac65e230-3457-a31f-d780-ee21201daa30": {},
-      "af1db5f5-143a-fba6-9cd9-a55093e56125": {},
-      "fd1b2bef-f859-49d2-e378-eba968ee639c": {}
+      "37c4dc5e-7e7e-afd2-c2d4-db3d4350a5b2": {},
+      "5fb05576-0a6a-8e82-cf8d-d350cbfba564": {},
+      "84671374-a050-f758-59eb-5479f5c11d1c": {},
+      "8a91fb20-6ef2-7e1d-3fed-a2993d550bcd": {}
     },
     "3a8fd94b-1847-deac-b9d6-f40dfda1855e": {
       "27349bbd-dc1b-959f-b1e6-ea40442c83c1": {},
@@ -775,6 +775,27 @@
       },
       "sets": {}
     },
+    "37c4dc5e-7e7e-afd2-c2d4-db3d4350a5b2": {
+      "attributes": {
+        "high": "50",
+        "low": "-50"
+      },
+      "base": "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
+      "meta": {},
+      "parent": "18ea788b-2eb9-82a2-4370-a2944a99d51a",
+      "pointers": {
+        "base": "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
+        "dst": "0da0c46d-dab4-54cd-b2be-6c2264349da2",
+        "src": "8a91fb20-6ef2-7e1d-3fed-a2993d550bcd"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
     "38c8f113-df7b-fc28-0d1a-f42d73d45254": {
       "attributes": {
         "name": "ROOT"
@@ -1070,7 +1091,7 @@
       "attributes": {
         "name": "velocity",
         "unit": "mi/h",
-        "value": "25.0"
+        "value": "75.0"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -1100,6 +1121,24 @@
         "position": {
           "x": 372,
           "y": 310
+        }
+      },
+      "sets": {}
+    },
+    "3ad18894-24b6-e3df-4b02-bf917a37f802": {
+      "attributes": {},
+      "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+      "meta": {},
+      "parent": "027db90e-b429-e45d-055b-b90ebf99ace0",
+      "pointers": {
+        "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+        "dst": "dc47d85f-ea60-4770-f301-2bb262acdfaa",
+        "src": "9c8855e3-9bfd-58db-e720-d7736ccd897a"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
         }
       },
       "sets": {}
@@ -1155,24 +1194,6 @@
         "position": {
           "x": 712,
           "y": 87
-        }
-      },
-      "sets": {}
-    },
-    "437666a4-f664-4f35-cfd4-cb8f16b6a7b9": {
-      "attributes": {},
-      "base": "26b7ba2b-2290-a298-76cb-523734dcd8d2",
-      "meta": {},
-      "parent": "18ea788b-2eb9-82a2-4370-a2944a99d51a",
-      "pointers": {
-        "base": "26b7ba2b-2290-a298-76cb-523734dcd8d2",
-        "dst": "af1db5f5-143a-fba6-9cd9-a55093e56125",
-        "src": "1fcaa7c8-e7b1-31ac-10c7-b8ec7e97fc57"
-      },
-      "registry": {
-        "position": {
-          "x": 100,
-          "y": 100
         }
       },
       "sets": {}
@@ -1330,15 +1351,18 @@
       },
       "sets": {}
     },
-    "5b36aef2-0e46-0dcd-a909-0a08a700a84b": {
-      "attributes": {},
-      "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
+    "5fb05576-0a6a-8e82-cf8d-d350cbfba564": {
+      "attributes": {
+        "high": "50",
+        "low": "-50"
+      },
+      "base": "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
       "meta": {},
-      "parent": "027db90e-b429-e45d-055b-b90ebf99ace0",
+      "parent": "18ea788b-2eb9-82a2-4370-a2944a99d51a",
       "pointers": {
-        "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
-        "dst": "dc47d85f-ea60-4770-f301-2bb262acdfaa",
-        "src": "9c8855e3-9bfd-58db-e720-d7736ccd897a"
+        "base": "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
+        "dst": "cda0285c-2ca1-05d7-9625-1c5ca4d6d963",
+        "src": "8a91fb20-6ef2-7e1d-3fed-a2993d550bcd"
       },
       "registry": {
         "position": {
@@ -1486,25 +1510,25 @@
             -1,
             -1,
             -1,
-            -1,
-            -1,
             1,
+            -1,
+            -1,
             -1,
             -1,
             -1,
             -1
           ],
           "items": [
-            "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
+            "d30999bf-f3eb-b305-0e5b-27004151af6f",
+            "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
+            "26b7ba2b-2290-a298-76cb-523734dcd8d2",
+            "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
+            "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
             "a461d7a6-abe0-a69e-e44f-d215340133b3",
             "b82c559a-a4d5-0a08-d58b-2948f8274c23",
-            "26b7ba2b-2290-a298-76cb-523734dcd8d2",
-            "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
-            "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
-            "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
+            "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
             "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
-            "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
-            "d30999bf-f3eb-b305-0e5b-27004151af6f"
+            "35de2499-e5ab-19e6-240b-3cb6ecbb0c22"
           ]
         }
       },
@@ -1610,6 +1634,24 @@
       },
       "sets": {}
     },
+    "84671374-a050-f758-59eb-5479f5c11d1c": {
+      "attributes": {},
+      "base": "26b7ba2b-2290-a298-76cb-523734dcd8d2",
+      "meta": {},
+      "parent": "18ea788b-2eb9-82a2-4370-a2944a99d51a",
+      "pointers": {
+        "base": "26b7ba2b-2290-a298-76cb-523734dcd8d2",
+        "dst": "8a91fb20-6ef2-7e1d-3fed-a2993d550bcd",
+        "src": "1fcaa7c8-e7b1-31ac-10c7-b8ec7e97fc57"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
+        }
+      },
+      "sets": {}
+    },
     "8612cfdd-4925-61a1-579b-0a8990b9d332": {
       "attributes": {},
       "base": "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
@@ -1643,6 +1685,26 @@
         "position": {
           "x": 263,
           "y": 373
+        }
+      },
+      "sets": {}
+    },
+    "8a91fb20-6ef2-7e1d-3fed-a2993d550bcd": {
+      "attributes": {
+        "driverType": "SLSQPdriver",
+        "hasObjective": true,
+        "hasParameters": true
+      },
+      "base": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
+      "meta": {},
+      "parent": "18ea788b-2eb9-82a2-4370-a2944a99d51a",
+      "pointers": {
+        "base": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944"
+      },
+      "registry": {
+        "position": {
+          "x": 324,
+          "y": 260
         }
       },
       "sets": {}
@@ -1848,8 +1910,8 @@
       },
       "registry": {
         "position": {
-          "x": 567,
-          "y": 230
+          "x": 622,
+          "y": 91
         }
       },
       "sets": {}
@@ -1888,48 +1950,6 @@
         "position": {
           "x": 515,
           "y": 214
-        }
-      },
-      "sets": {}
-    },
-    "ac65e230-3457-a31f-d780-ee21201daa30": {
-      "attributes": {
-        "high": "50",
-        "low": "-50"
-      },
-      "base": "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
-      "meta": {},
-      "parent": "18ea788b-2eb9-82a2-4370-a2944a99d51a",
-      "pointers": {
-        "base": "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
-        "dst": "0da0c46d-dab4-54cd-b2be-6c2264349da2",
-        "src": "af1db5f5-143a-fba6-9cd9-a55093e56125"
-      },
-      "registry": {
-        "position": {
-          "x": 100,
-          "y": 100
-        }
-      },
-      "sets": {}
-    },
-    "af1db5f5-143a-fba6-9cd9-a55093e56125": {
-      "attributes": {
-        "class_name": "SLSQPdriver",
-        "name": "driver",
-        "objective": "parabaloid.f_xy",
-        "package": "openmdao.lib.drivers.slsqpdriver"
-      },
-      "base": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
-      "meta": {},
-      "parent": "18ea788b-2eb9-82a2-4370-a2944a99d51a",
-      "pointers": {
-        "base": "ceb98f28-1c51-cb46-4d75-7bccf1ecd944"
-      },
-      "registry": {
-        "position": {
-          "x": 420,
-          "y": 279
         }
       },
       "sets": {}
@@ -2169,7 +2189,7 @@
     },
     "c8ae1050-738d-0125-51f7-6da331eadbf7": {
       "attributes": {
-        "name": "tire_circumference",
+        "name": "tire_circ",
         "unit": "inch"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
@@ -2289,32 +2309,24 @@
     },
     "ceb98f28-1c51-cb46-4d75-7bccf1ecd944": {
       "attributes": {
-        "class_name": "Driver",
+        "class_name": "",
+        "driverType": "custom",
         "hasObjective": false,
         "hasObjectives": false,
         "hasParameters": false,
         "name": "Driver",
-        "package": "openmdao.main.driver"
+        "package": ""
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
         "attributes": {
           "class_name": {
             "type": "string",
-            "default": "Driver",
-            "enum": [
-              "SLSQPdriver",
-              "CONMINdriver",
-              ""
-            ]
+            "default": ""
           },
           "package": {
             "type": "string",
-            "default": "openmdao.main.driver",
-            "enum": [
-              "openmdao.lib.drivers.api",
-              "openmdao.lib.drivers.slsqpdriver"
-            ]
+            "default": ""
           },
           "hasParameters": {
             "type": "boolean",
@@ -2327,6 +2339,15 @@
           "hasObjectives": {
             "type": "boolean",
             "default": false
+          },
+          "driverType": {
+            "type": "string",
+            "default": "custom",
+            "enum": [
+              "custom",
+              "SLSQPdriver",
+              "CONMINdriver"
+            ]
           }
         }
       },
@@ -2597,8 +2618,8 @@
       },
       "registry": {
         "position": {
-          "x": 711,
-          "y": 238
+          "x": 709,
+          "y": 222
         }
       },
       "sets": {}
@@ -2646,7 +2667,8 @@
     "ec0b6e7a-2834-bb4a-83a4-fac211bd0aad": {
       "attributes": {
         "name": "tire_circumference",
-        "unit": "inch"
+        "unit": "inch",
+        "value": "75.0"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -2772,27 +2794,6 @@
         "position": {
           "x": 514,
           "y": 107
-        }
-      },
-      "sets": {}
-    },
-    "fd1b2bef-f859-49d2-e378-eba968ee639c": {
-      "attributes": {
-        "high": "50",
-        "low": "-50"
-      },
-      "base": "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
-      "meta": {},
-      "parent": "18ea788b-2eb9-82a2-4370-a2944a99d51a",
-      "pointers": {
-        "base": "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
-        "dst": "cda0285c-2ca1-05d7-9625-1c5ca4d6d963",
-        "src": "af1db5f5-143a-fba6-9cd9-a55093e56125"
-      },
-      "registry": {
-        "position": {
-          "x": 100,
-          "y": 100
         }
       },
       "sets": {}

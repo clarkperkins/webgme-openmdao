@@ -174,7 +174,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             var objectives = [];
             var parameters = [];
             var connections = [];
-            var passthroughs = [];
+            var potentialPassthroughs = [];
             var assemblyName = 'mymodel';
 
             children.forEach(function (node) {
@@ -196,7 +196,18 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                         break;
 
                     case 'Driver':
-                        driver = node.data.atr;
+                        if (node.data.atr.driverType === 'custom') {
+                            driver = node.data.atr;
+                        } else {
+                            // Need to do some tweaking
+                            driver = {
+                                name: node.data.atr.name,
+                                class_name: node.data.atr.driverType,
+                                // This is where all the built-in drivers live
+                                package: 'openmdao.lib.drivers.api'
+                            };
+                        }
+
                         break;
 
                     case 'parameter':
@@ -264,9 +275,21 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                                 return;
                             }
 
+                            var parentMeta = self.getMetaType(self.core.getParent(src)).data.atr.name;
+
+                            if (parentMeta != 'Assembly') {
+                                message = 'Passthroughs must have either a source or a destination be a child of an Assembly.';
+                                self.logger.error(message);
+                                self.createMessage(self.rootNode, message);
+                                callback(message, self.result);
+                                return;
+                            }
+
                             var srcName = src.data.atr.name;
 
                             var srcUnit = src.data.atr.unit;
+
+                            var srcVal = src.data.atr.value;
 
                             self.core.loadPointer(node, 'dst', function(err, dst) {
                                 if (err) {
@@ -278,16 +301,18 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
 
                                 var dstUnit = dst.data.atr.unit;
 
-                                if (srcUnit === dstUnit) {
-                                    passthroughs[passthroughs.length] = {
-                                        name: dstName
-                                    };
-                                } else {
-                                    connections[connections.length] = {
-                                        from: srcName,
-                                        to: dstName
+                                potentialPassthroughs[potentialPassthroughs.length] = {
+                                    type: 'in',
+                                    from: {
+                                        name: srcName,
+                                        unit: srcUnit,
+                                        value: srcVal
+                                    },
+                                    to: {
+                                        name: dstName,
+                                        unit: dstUnit
                                     }
-                                }
+                                };
                             });
                         });
                         break;
@@ -310,27 +335,38 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                                     return;
                                 }
 
+                                var parentMeta = self.getMetaType(self.core.getParent(dst)).data.atr.name;
+
+                                if (parentMeta != 'Assembly') {
+                                    message = 'Passthroughs must have either a source or a destination be a child of an Assembly.';
+                                    self.logger.error(message);
+                                    self.createMessage(self.rootNode, message);
+                                    callback(message, self.result);
+                                    return;
+                                }
+
                                 var dstName = dst.data.atr.name;
 
                                 var dstUnit = dst.data.atr.unit;
 
-                                if (srcUnit === dstUnit) {
-                                    passthroughs[passthroughs.length] = {
-                                        name: srcName
-                                    };
-                                } else {
-                                    connections[connections.length] = {
-                                        from: srcName,
-                                        to: dstName
+                                potentialPassthroughs[potentialPassthroughs.length] = {
+                                    type: 'out',
+                                    from: {
+                                        name: srcName,
+                                        unit: srcUnit
+                                    },
+                                    to: {
+                                        name: dstName,
+                                        unit: dstUnit
                                     }
-                                }
+                                };
                             });
                         });
                         break;
                 }
             });
 
-            self.generatePython(assemblyName, driver, components, objectives, parameters, connections, passthroughs, callback);
+            self.generatePython(assemblyName, driver, components, objectives, parameters, connections, potentialPassthroughs, callback);
         };
 
         self.core.loadChildren(self.activeNode, afterLoading);
@@ -385,6 +421,57 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             }
         }
 
+        var finalPassthroughs = [];
+        var passDict = {};
+
+        // Filter out the passthroughs that have conflicting units
+        passthroughs.forEach(function (passthrough) {
+            if (passthrough.type === 'in') {
+                // Input passthrough, need to process more after
+                if (!passDict.hasOwnProperty(passthrough.from.name)) {
+                    passDict[passthrough.from.name] = [];
+                }
+                var len = passDict[passthrough.from.name].length;
+                passDict[passthrough.from.name][len] = passthrough;
+            } else {
+                // Output passthrough, can just add it to the final list
+                finalPassthroughs[finalPassthroughs.length] = {
+                    name: passthrough.from.name
+                };
+            }
+        });
+
+        var inputs = [];
+
+        for (var name in passDict) {
+            if (passDict.hasOwnProperty(name)) {
+                var unitMismatch = false;
+                passDict[name].forEach(function (passthrough) {
+                    if (passthrough.from.unit !== passthrough.to.unit) {
+                        unitMismatch = true;
+                    }
+                });
+                if (unitMismatch || passDict[name].length > 1) {
+                    inputs[inputs.length] = {
+                        name: name,
+                        unit: passDict[name][0].from.unit,
+                        value: passDict[name][0].from.value
+                    };
+                    passDict[name].forEach(function (connection) {
+                        connections[connections.length] = {
+                            from: connection.from.name,
+                            to: connection.to.name
+                        }
+                    });
+                } else {
+                    console.log(passDict[name]);
+                    finalPassthroughs[finalPassthroughs.length] = {
+                        name: passDict[name][0].to.name
+                    };
+                }
+            }
+        }
+
         var templatePY = ejs.render(
             TEMPLATES['assembly.py.ejs'],
             {
@@ -395,7 +482,8 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 objectives: objectives,
                 parameters: parameters,
                 connections: connections,
-                passthroughs: passthroughs
+                passthroughs: finalPassthroughs,
+                inputs: inputs
             });
 
         var templateFileName = self.activeNode.data.atr.name.toLowerCase()+'/'+assemblyName+'.py';
@@ -405,21 +493,29 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 callback(err, self.result);
                 return;
             }
-            self.blobClient.saveAllArtifacts(function (err, hashes) {
+            artifact.addFile(self.activeNode.data.atr.name.toLowerCase()+'/__init__.py', '', function (err) {
                 if (err) {
                     callback(err, self.result);
                     return;
                 }
-                // This will add a download hyperlink in the result-dialog.
-                self.result.addArtifact(hashes[0]);
-                // This will save the changes. If you don't want to save;
-                // exclude self.save and call callback directly from this scope.
-                self.result.setSuccess(true);
-                self.save('added obj', function (err) {
-                    callback(null, self.result);
+                self.blobClient.saveAllArtifacts(function (err, hashes) {
+                    if (err) {
+                        callback(err, self.result);
+                        return;
+                    }
+                    // This will add a download hyperlink in the result-dialog.
+                    self.result.addArtifact(hashes[0]);
+                    // This will save the changes. If you don't want to save;
+                    // exclude self.save and call callback directly from this scope.
+                    self.result.setSuccess(true);
+                    self.save('added obj', function (err) {
+                        callback(null, self.result);
+                    });
                 });
             });
         });
+
+
     };
 
     return OpenMDAO;
