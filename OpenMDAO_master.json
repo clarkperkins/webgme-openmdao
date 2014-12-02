@@ -16,6 +16,7 @@
     "0b54f286-9b08-ae22-0dbb-e8fab97cbdad": "50513644",
     "0bea259a-a044-f12c-2691-31efe345b494": "1785542441",
     "0da0c46d-dab4-54cd-b2be-6c2264349da2": "1792980098",
+    "1299b2e9-c651-19ea-c179-de70c7d01ae9": "208012830",
     "12e2fbed-7f66-5e13-f7c9-5d2af2821cc1": "1105685561",
     "14ab51a3-c4d2-f4fe-f6e6-c49b0891dba3": "1631960089",
     "1575be2d-df9d-f022-bacb-19b735d304b6": "2086513137",
@@ -95,7 +96,6 @@
     "8fbcaf51-08f0-7a30-ff0b-2b0dc39e096f": "1105685561",
     "9152dcac-d33e-8732-ef07-7e101a5fd301": "493064691",
     "94764ce8-b4f3-aa97-8628-fbdcbcbc9da2": "1734432399",
-    "94e245df-48e3-4c9a-60e2-51d1d44de698": "1834754487",
     "9586d4cc-fabf-e522-9037-70c542e87e04": "1862569833",
     "960aa63a-ec9e-8a01-0579-9edd8860a803": "50513644",
     "9b0d74c5-97a5-5f21-6716-c470b5e21b2a": "345876222",
@@ -284,10 +284,10 @@
         "84e8099b-1375-18f0-1f56-ad9e61742bee": {},
         "e1482ae2-8deb-9048-8913-1964129870ed": {}
       },
+      "1299b2e9-c651-19ea-c179-de70c7d01ae9": {},
       "4fb435e8-1b92-f749-6e51-d22a2ab84f07": {},
       "5f5e0785-409a-8a0b-b6b0-c2f0143524ae": {},
-      "8863e0a2-d636-e402-d485-da44f9b492fa": {},
-      "94e245df-48e3-4c9a-60e2-51d1d44de698": {}
+      "8863e0a2-d636-e402-d485-da44f9b492fa": {}
     },
     "b9479b98-f07e-eaa4-5b2e-6766a7449b27": {
       "33bfe47b-91bb-8f27-f237-dc6c0e744f45": {
@@ -510,7 +510,7 @@
     "0bea259a-a044-f12c-2691-31efe345b494": {
       "attributes": {
         "class_name": "Paraboloid",
-        "name": "par1",
+        "name": "paraboloid",
         "package": "openmdao.examples.simple.paraboloid"
       },
       "base": "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
@@ -521,8 +521,8 @@
       },
       "registry": {
         "position": {
-          "x": 349,
-          "y": 160
+          "x": 328,
+          "y": 111
         }
       },
       "sets": {}
@@ -543,6 +543,24 @@
         "position": {
           "x": 89,
           "y": 200
+        }
+      },
+      "sets": {}
+    },
+    "1299b2e9-c651-19ea-c179-de70c7d01ae9": {
+      "attributes": {},
+      "base": "9b0d74c5-97a5-5f21-6716-c470b5e21b2a",
+      "meta": {},
+      "parent": "a6966c3d-1a0b-3139-44df-b7f8c8dda306",
+      "pointers": {
+        "base": "9b0d74c5-97a5-5f21-6716-c470b5e21b2a",
+        "dst": "5f5e0785-409a-8a0b-b6b0-c2f0143524ae",
+        "src": "4a4e34df-f794-0ef2-c852-d9867e23d11c"
+      },
+      "registry": {
+        "position": {
+          "x": 100,
+          "y": 100
         }
       },
       "sets": {}
@@ -847,7 +865,7 @@
     "2f60d591-52f5-9ab0-f61f-38131b85744b": {
       "attributes": {
         "name": "current_gear",
-        "value": "0"
+        "value": "3"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -1343,7 +1361,7 @@
       "attributes": {
         "name": "velocity",
         "unit": "mi/h",
-        "value": "75.0"
+        "value": "25.0"
       },
       "base": "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
       "meta": {},
@@ -2104,7 +2122,8 @@
     "7e59f579-fa65-a139-bcfe-664abf5a1a3b": {
       "attributes": {
         "description": "",
-        "name": "Assembly"
+        "name": "Assembly",
+        "visualization": false
       },
       "base": "cd891e7b-e2ea-e929-f6cd-9faf4f1fc045",
       "meta": {
@@ -2124,8 +2143,8 @@
           ],
           "maxItems": [
             -1,
-            -1,
             1,
+            -1,
             -1,
             -1,
             -1,
@@ -2136,23 +2155,27 @@
             -1
           ],
           "items": [
-            "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
-            "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
-            "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
-            "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
-            "9b0d74c5-97a5-5f21-6716-c470b5e21b2a",
-            "d30999bf-f3eb-b305-0e5b-27004151af6f",
-            "26b7ba2b-2290-a298-76cb-523734dcd8d2",
-            "a461d7a6-abe0-a69e-e44f-d215340133b3",
             "48be2b06-704b-1b0d-5cd5-1b7dc63c05e1",
+            "ceb98f28-1c51-cb46-4d75-7bccf1ecd944",
             "c6d8e9b9-6dc0-1ae6-15be-147f48b6d4c6",
-            "b82c559a-a4d5-0a08-d58b-2948f8274c23"
+            "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
+            "a461d7a6-abe0-a69e-e44f-d215340133b3",
+            "9b0d74c5-97a5-5f21-6716-c470b5e21b2a",
+            "e39ee0cb-b5ef-b41d-d9b4-11263972048a",
+            "b82c559a-a4d5-0a08-d58b-2948f8274c23",
+            "26b7ba2b-2290-a298-76cb-523734dcd8d2",
+            "35de2499-e5ab-19e6-240b-3cb6ecbb0c22",
+            "d30999bf-f3eb-b305-0e5b-27004151af6f"
           ]
         },
         "attributes": {
           "description": {
             "type": "string",
             "default": ""
+          },
+          "visualization": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -2411,7 +2434,7 @@
     },
     "8a91fb20-6ef2-7e1d-3fed-a2993d550bcd": {
       "attributes": {
-        "driverType": "SLSQPdriver",
+        "driverType": "CONMINdriver",
         "hasObjective": true,
         "hasParameters": true
       },
@@ -2514,24 +2537,6 @@
         "base": "d30999bf-f3eb-b305-0e5b-27004151af6f",
         "dst": "534edd0b-4830-5046-352c-24c5ccabe2a0",
         "src": "ec0b6e7a-2834-bb4a-83a4-fac211bd0aad"
-      },
-      "registry": {
-        "position": {
-          "x": 100,
-          "y": 100
-        }
-      },
-      "sets": {}
-    },
-    "94e245df-48e3-4c9a-60e2-51d1d44de698": {
-      "attributes": {},
-      "base": "9b0d74c5-97a5-5f21-6716-c470b5e21b2a",
-      "meta": {},
-      "parent": "a6966c3d-1a0b-3139-44df-b7f8c8dda306",
-      "pointers": {
-        "base": "9b0d74c5-97a5-5f21-6716-c470b5e21b2a",
-        "dst": "5f5e0785-409a-8a0b-b6b0-c2f0143524ae",
-        "src": "4a4e34df-f794-0ef2-c852-d9867e23d11c"
       },
       "registry": {
         "position": {
@@ -2796,7 +2801,8 @@
     },
     "a6966c3d-1a0b-3139-44df-b7f8c8dda306": {
       "attributes": {
-        "name": "ParaboloidVisualization"
+        "name": "ParaboloidVisualization",
+        "visualization": true
       },
       "base": "7e59f579-fa65-a139-bcfe-664abf5a1a3b",
       "meta": {},

@@ -1,9 +1,7 @@
 #!/bin/bash
 
-workon openmdao
-
 python <%= mainFile %>
 
+<% if (visualization) { %>
 open <%= htmlFile %>
-
-$SHELL
+<% } %>

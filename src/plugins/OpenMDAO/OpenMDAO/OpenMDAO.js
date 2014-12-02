@@ -169,8 +169,11 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 return;
             }
 
+            var visualization = self.activeNode.data.atr.visualization;
             var components = [];
             var driver = null;
+            var inputs = [];
+            var outputs = [];
             var objectives = [];
             var responses = [];
             var parameters = [];
@@ -209,6 +212,14 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                             };
                         }
 
+                        break;
+
+                    case 'input':
+                        inputs[inputs.length] = node.data.atr;
+                        break;
+
+                    case 'output':
+                        outputs[outputs.length] = node.data.atr;
                         break;
 
                     case 'parameter':
@@ -382,7 +393,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 }
             });
 
-            self.generatePython(assemblyName, driver, components, objectives, responses, parameters, connections, potentialPassthroughs, callback);
+            self.generatePython(assemblyName, visualization, driver, components, inputs, outputs, objectives, responses, parameters, connections, potentialPassthroughs, callback);
         };
 
         self.core.loadChildren(self.activeNode, afterLoading);
@@ -391,8 +402,11 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
     /**
      * Do the generation of the python file
      * @param assemblyName
+     * @param visualization
      * @param driver
      * @param components
+     * @param inputs
+     * @param outputs
      * @param objectives
      * @param responses
      * @param parameters
@@ -400,7 +414,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
      * @param passthroughs
      * @param callback
      */
-    OpenMDAO.prototype.generatePython = function (assemblyName, driver, components, objectives, responses, parameters, connections, passthroughs, callback) {
+    OpenMDAO.prototype.generatePython = function (assemblyName, visualization, driver, components, inputs, outputs, objectives, responses, parameters, connections, passthroughs, callback) {
         // First transform ejs-files into js files (needed for client-side runs) -> run Templates/combine_templates.js.
         // See instructions in file. You must run this after any modifications to the ejs template.
         var self = this;
@@ -466,7 +480,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             }
         });
 
-        var inputs = [];
+        var newInputs = [];
 
         for (var name in passDict) {
             if (passDict.hasOwnProperty(name)) {
@@ -477,7 +491,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                     }
                 });
                 if (unitMismatch || passDict[name].length > 1) {
-                    inputs[inputs.length] = {
+                    newInputs[newInputs.length] = {
                         name: name,
                         unit: passDict[name][0].from.unit,
                         value: passDict[name][0].from.value
@@ -501,6 +515,7 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             TEMPLATES['assembly.py.ejs'],
             {
                 name: self.activeNode.data.atr.name,
+                visualization: visualization,
                 driver: driver,
                 components: components,
                 uniqueImports: joinedImports,
@@ -509,7 +524,10 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
                 parameters: parameters,
                 connections: connections,
                 passthroughs: finalPassthroughs,
-                inputs: inputs
+                setInputs: newInputs,
+                inputs: inputs,
+                outputs: outputs
+
             });
 
         var jsonInfo = {
@@ -523,7 +541,8 @@ define(['plugin/PluginConfig', 'plugin/PluginBase', 'plugin/OpenMDAO/OpenMDAO/me
             TEMPLATES['run.ejs'],
             {
                 mainFile: templateDir+self.activeNode.data.atr.name.toLowerCase()+'.py',
-                htmlFile: self.activeNode.data.atr.name+'.html'
+                htmlFile: self.activeNode.data.atr.name+'.html',
+                visualization: visualization
             }
         );
 

@@ -12,7 +12,7 @@ from <%= myPackage %> import <%= uniqueImports[myPackage] %>
 class <%= name %>(Assembly):
 
     # Assembly input variables (Assume float for now)
-    <% inputs.forEach(function (input) { %>
+    <% setInputs.forEach(function (input) { %>
     <%= input.name %> = Float(<%= input.value %>, iotype='in', units='<%= input.unit %>')
     <% }) %>
 
@@ -22,6 +22,7 @@ class <%= name %>(Assembly):
         self.add('driver', <%= driver.class_name %>())
         <% if (driver.class_name === 'DOEdriver') { %>
         self.driver.DOEgenerator = Uniform(1000)
+
         <% } %>
         <% } %>
 
@@ -62,12 +63,20 @@ class <%= name %>(Assembly):
         <% }) %>
 
 if __name__ == '__main__':
+    <% if (visualization) { %>
     # Imports for the plotting
     import time
+    import os
+    import shutil
     from mpl_toolkits.mplot3d import Axes3D
     from matplotlib import cm
     from matplotlib import pyplot as p
     from matplotlib import animation as animation
+
+    if os.path.isdir('img'):
+        shutil.rmtree('img')
+
+    os.mkdir('img')
 
     analysis = <%= name %>()
     # timer start
@@ -76,9 +85,9 @@ if __name__ == '__main__':
 
     # Assuming for paraboloids only at this point
     # Get the x,y, and f_xy values
-    x = analysis.driver.case_inputs.paraboloid.x
-    y = analysis.driver.case_inputs.paraboloid.y
-    f_xy = analysis.driver.case_outputs.paraboloid.f_xy
+    x = analysis.driver.case_inputs.<%= components[0].name %>.x
+    y = analysis.driver.case_inputs.<%= components[0].name %>.y
+    f_xy = analysis.driver.case_outputs.<%= components[0].name %>.f_xy
 
     # Plotting setup
     p.ion()
@@ -100,7 +109,7 @@ if __name__ == '__main__':
         ax.grid(False)
         temp = ax.plot_trisurf(x[:i],y[:i],f_xy[:i], cmap=cm.jet, linewidth=0.2)
         # Save file and then write to html
-        fileName = "out_" + str(i) + ".png"
+        fileName = os.path.join("img", "out_" + str(i) + ".png")
         tempStr = '<img src=\"' + fileName + '\">\n'
         op = "x: {}<br> y: {}<br> f(x, y): {}<br>".format(x[i], y[i], f_xy[i])
         f.write('<h2>Iteration ' + str(i) + ': </h2>' + op + '</p>\n')
@@ -108,10 +117,10 @@ if __name__ == '__main__':
         p.savefig(fileName)
     print 'Optimized values:'
     <% parameters.forEach(function (parameter) { %>
-    print '<%= parameter.name %>: {0}'.format(problem.<%= parameter.name %>)
-    f.write('<%= parameter.name %>: {0}'.format(problem.<%= parameter.name %>))
+    print '<%= parameter.name %>: {0}'.format(analysis.<%= parameter.name %>)
+    f.write('<%= parameter.name %>: {0}'.format(analysis.<%= parameter.name %>))
     <% }) %>
-    p.savefig('final.png')
+    p.savefig(os.path.join('img', 'final.png'))
     p.ioff()
     f.write('<h1> Final iteration of optimization </h1>')
     for i in range(len(x)-1, len(x)):
@@ -119,5 +128,42 @@ if __name__ == '__main__':
         op2 = "x: {} y: {} f(x, y): {}".format(x[i], y[i], f_xy[i])
         f.write('<h2>' + op + '</h2>\n')
         print op2
-    f.write('<img src=\"final.png\">')
+    f.write('<img src=\"img/final.png\">')
     f.write('</body>\n</html>')
+
+    <% } else { %>
+
+    analysis = <%= name %>()
+
+    <% if (inputs.length > 0) { %>
+    print 'Inputs:'
+    <% } %>
+
+    <% inputs.forEach(function (input) { %>
+    analysis.<%= input.name %> = <%= input.value %>
+    print '<%= input.name %>: <%= input.value %>'
+    <% }) %>
+
+    print
+
+    analysis.run()
+
+    <% if (parameters.length > 0) { %>
+    print 'Optimized values:'
+    <% } %>
+
+    <% parameters.forEach(function (parameter) { %>
+    print '<%= parameter.name %>: {0}'.format(analysis.<%= parameter.name %>)
+    <% }) %>
+
+    print
+
+    <% if (outputs.length > 0) { %>
+    print 'Outputs:'
+    <% } %>
+
+    <% outputs.forEach(function (output) { %>
+    print '<%= output.name %>: {0}'.format(analysis.<%= output.name %>)
+    <% }) %>
+
+    <% } %>
